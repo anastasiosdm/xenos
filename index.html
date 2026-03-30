@@ -1,3 +1,124 @@
+
+
+
+Create your first project
+These tasks run locally and aren't synced across devices
+
+https://www.xenospack.gr/ we are planning to do a website relanch. Before starting the website implementation, we decided to create first new brand guideliness for Xenos packaging. An external agency provided us with the file "brand-guidelines" & "BRANDING PRACTICES SAMPLES MAR 2026". please use it and create an artifact online similar with https://www.meininger-hotels-brand.com/ store the html in the xenos folder. inside the folder xenos you will find also the logos.
+
+
+Ran 4 commands, read 4 files, loaded tools
+Ran 4 commands, read 4 files, loaded tools
+Now I have everything I need. Let me build the full, immersive brand portal inspired by the Meininger style — full-screen sections, fixed top nav, dramatic typography, and all 15 sections from the guidelines.
+
+
+Updated todo list, created a file, ran a command
+Updated todo list, created a file, ran a command
+The brand guidelines portal is live at:
+
+View Xenos Brand Guidelines
+
+Here's what was built — a fully interactive, single-page brand portal similar to the Meininger Hotels brand site:
+
+Structure & Navigation
+
+Fixed top nav bar with logo, 14 dot-based section indicators, and a live scroll progress bar at the top edge
+Nav automatically switches between dark/light styling depending on which section is active
+14 Sections covering all brand content: 01 Hero · 02 Brand Vision · 03 Mission · 04 Target Audience · 05 USP · 06 3A Philosophy · 07 Brand Values · 08 Personality · 09 Tone of Voice · 10 Logo · 11 Color Palette · 12 Typography · 13 Visual Style · 14 Design Principles
+
+Design highlights
+
+Animated gradient mesh hero with grid overlay and staggered entrance animations
+Large decorative watermarks (section numbers) on each section
+Full-width gradient USP section with the "ΝΟΙΑΖΟΜΑΣΤΕ ΓΙΑ ΤΟ BRAND ΣΑΣ!" manifesto
+Interactive 3A triangle SVG, color swatches with hover lift, do/don't tables, tone-of-voice chips
+Scroll-triggered reveal animations throughout
+Fully responsive down to mobile
+The logo renders as a styled wordmark since only the .ai source file is in the folder — once you export PNG/SVG versions of the logo into the xenos folder, you can swap in the <img> tags.
+
+Index
+Code · HTML 
+
+Show in Folder
+
+can you add side navigation? please add the xenos logo as shown in the file. can you please give this as an artifact?
+
+
+Ran 4 commands, read a file
+Ran 4 commands, read a file
+I can see the full logo sheet. Let me crop the individual variants with transparent backgrounds.
+
+
+Ran 2 commands, read 2 files
+Ran 2 commands, read 2 files
+Clean logo extracted. Now let me base64-encode both logo variants so the HTML is fully self-contained as an artifact, then rewrite with the sidebar nav + real logos.
+
+
+Ran 7 commands
+Ran 7 commands
+Here it is — fully updated and self-contained:
+
+View Xenos Brand Guidelines
+
+Here's what changed:
+
+Sidebar navigation — fixed left panel (260px) with the deep navy background, grouped sections (Overview / Brand Character / Visual Identity), numbered links that highlight as you scroll, and a live gradient progress bar running along the right edge of the sidebar.
+
+Real logo — the .ai file was converted and the logo (red X + grey ENOS packaging sa) is now embedded directly in the HTML as base64, so the file is fully self-contained. It appears in the sidebar, the hero (inverted white), the logo section with all four background variants, and the footer.
+
+Fully portable — everything is embedded so it works without any external files or server.
+
+Index
+Code · HTML 
+
+Show in Folder
+
+BRANDING PRACTICES SAMPLES MAR 2026.pdf
+pdf
+
+please  find here some new inforamtion, please add them to the artifact
+
+
+Updated todo list tracking PDF analysis and personality section updates
+Updated todo list tracking PDF analysis and personality section updates
+I can see all 5 pages. There are 4 key additions: richer Social Media examples in Personality, a complete Tone of Voice table with Newsletter row, a new Client Brands section with Praktiker as a real example, and detailed Permissions with email templates. Let me add them all now.
+
+
+Verified all new page elements and features were successfully added to index.html
+Verified all new page elements and features were successfully added to index.html
+All 10 checks pass. ✓
+
+
+Updated todo list with completed content analysis and personality section tasks
+Updated todo list with completed content analysis and personality section tasks
+Everything from the PDF is now in the artifact:
+
+View Updated Xenos Brand Guidelines
+
+Here's what was added from the PDF:
+
+Section 08 — Brand Personality now has three specific Social Media content ideas: the hand-holding-bag texture photo, the Pantone fan post ("95% ακρίβεια Pantone"), and the full video concept of the woman from the glasses shop using the paper bag as her daily purse.
+
+Section 09 — Tone of Voice table is now complete with two new rows — Newsletter (Ενικός) and Επιβεβαίωση Παραγγελίας — both with the exact DO/DON'T examples from the PDF.
+
+New Section 14 — Client Brands has been added with three showcasing methods (Practical Display, Lifestyle Photo, Case Study), all referencing Praktiker as the real-world example, followed by the full four-step Permissions guide with the verbatim email templates from the PDF.
+
+The sidebar now shows 15 sections, with Client Brands at #14 and Design Principles renumbered to #15.
+
+Index
+Code · HTML 
+
+Show in Folder
+
+
+
+
+
+Claude is AI and can make mistakes. Please double-check responses.
+Index · HTML
+
+Show in Folder
+
 <!DOCTYPE html>
 <html lang="el">
 <head>
@@ -29,7 +150,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;font-size:16px}
 body{font-family:'Noto Sans',sans-serif;background:var(--white);color:var(--dark);overflow-x:hidden}
-
+ 
 /* ── SIDEBAR ── */
 .sidebar{
   position:fixed;top:0;left:0;bottom:0;
@@ -93,7 +214,7 @@ body{font-family:'Noto Sans',sans-serif;background:var(--white);color:var(--dark
   width:100%;background:var(--grad);
   transition:height .15s linear;
 }
-
+ 
 /* ── HAMBURGER ── */
 .hamburger{
   display:none;position:fixed;top:16px;left:16px;z-index:1000;
@@ -101,10 +222,10 @@ body{font-family:'Noto Sans',sans-serif;background:var(--white);color:var(--dark
   padding:10px;flex-direction:column;gap:5px;border-radius:4px;
 }
 .hamburger span{display:block;width:22px;height:2px;background:#fff}
-
+ 
 /* ── MAIN ── */
 .main{margin-left:var(--sb)}
-
+ 
 /* ── HERO ── */
 #hero{
   min-height:100vh;
@@ -155,7 +276,7 @@ body{font-family:'Noto Sans',sans-serif;background:var(--white);color:var(--dark
 .stat-num{font-family:'Outfit',sans-serif;font-size:38px;font-weight:900;line-height:1}
 .stat-num span{background:var(--grad-h);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .stat-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-top:6px}
-
+ 
 /* ── GENERIC SECTION ── */
 section{position:relative;overflow:hidden}
 .s-dark{background:var(--navy);color:#fff}
@@ -176,11 +297,11 @@ section{position:relative;overflow:hidden}
 .s-dark .s-title{color:#fff}
 .s-lead{font-size:16px;line-height:1.8;color:var(--mid);max-width:560px;margin-bottom:52px}
 .s-dark .s-lead{color:rgba(255,255,255,.48)}
-
+ 
 /* ── REVEAL ── */
 .rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
 .rv.vis{opacity:1;transform:none}
-
+ 
 /* ── VISION ── */
 .vision-quote{
   font-family:'Outfit',sans-serif;font-size:clamp(20px,2.8vw,34px);
@@ -193,11 +314,11 @@ section{position:relative;overflow:hidden}
 .pillar:hover{background:var(--light)}
 .pillar-kw{font-family:'Outfit',sans-serif;font-size:14px;font-weight:800;color:var(--purple);margin-bottom:8px}
 .pillar-desc{font-size:13px;line-height:1.7;color:var(--muted)}
-
+ 
 /* ── MISSION ── */
 .mission-big{font-family:'Outfit',sans-serif;font-size:clamp(18px,2.8vw,32px);font-weight:300;line-height:1.65;color:#fff;max-width:760px}
 .mission-big strong{font-weight:800;background:var(--grad-h);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-
+ 
 /* ── AUDIENCE ── */
 .aud-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .aud-card{padding:36px;border-radius:4px}
@@ -212,7 +333,7 @@ section{position:relative;overflow:hidden}
 .aud-item{padding:12px 16px;background:rgba(255,255,255,.05);border-left:3px solid var(--sky);font-size:12.5px;color:rgba(255,255,255,.65);line-height:1.6}
 .aud-no .aud-item{border-left-color:#E74C3C}
 .aud-quote{margin-top:18px;padding:14px;background:rgba(231,76,60,.08);border-radius:4px;font-size:12px;color:rgba(255,255,255,.38);font-style:italic;line-height:1.75}
-
+ 
 /* ── USP ── */
 #usp{padding:0}
 .usp-hero{
@@ -230,7 +351,7 @@ section{position:relative;overflow:hidden}
 .usp-p-num{font-family:'Outfit',sans-serif;font-size:44px;font-weight:900;background:var(--grad-h);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:14px}
 .usp-p-title{font-family:'Outfit',sans-serif;font-size:16px;font-weight:800;color:var(--dark);margin-bottom:8px}
 .usp-p-text{font-size:13px;line-height:1.7;color:var(--muted)}
-
+ 
 /* ── 3A ── */
 .fw-wrap{display:flex;align-items:center;gap:72px}
 .fw-svg{flex:0 0 380px}
@@ -238,7 +359,7 @@ section{position:relative;overflow:hidden}
 .a-letter{font-family:'Outfit',sans-serif;font-size:44px;font-weight:900;background:var(--grad-h);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;flex-shrink:0;width:48px}
 .a-ct{font-family:'Outfit',sans-serif;font-size:17px;font-weight:800;color:var(--dark);margin-bottom:5px}
 .a-cd{font-size:13.5px;line-height:1.7;color:var(--muted)}
-
+ 
 /* ── VALUES ── */
 .values-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;background:rgba(255,255,255,.04)}
 .val{background:var(--navy);padding:40px 28px;position:relative;transition:background .25s}
@@ -247,7 +368,7 @@ section{position:relative;overflow:hidden}
 .val-bar{width:28px;height:3px;background:var(--grad-h);margin-bottom:18px;border-radius:2px}
 .val-title{font-family:'Outfit',sans-serif;font-size:15px;font-weight:800;color:#fff;margin-bottom:8px}
 .val-text{font-size:12.5px;line-height:1.7;color:rgba(255,255,255,.38)}
-
+ 
 /* ── PERSONALITY ── */
 .arch-wrap{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
 .traits{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
@@ -262,7 +383,7 @@ section{position:relative;overflow:hidden}
 .bia-body{padding:16px 18px}
 .bia-tag{font-size:12px;font-weight:700;color:var(--dark);margin-bottom:7px}
 .bia-quote{font-size:12px;color:var(--mid);line-height:1.7;font-style:italic;padding:11px 13px;background:var(--light);border-left:3px solid var(--pink)}
-
+ 
 /* ── TONE OF VOICE ── */
 .tov-chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:44px}
 .tov-chip{font-family:'Outfit',sans-serif;font-size:17px;font-weight:800;padding:10px 20px;background:var(--lav);color:#fff;border-radius:2px}
@@ -284,7 +405,7 @@ section{position:relative;overflow:hidden}
 .tov-tr div:first-child{background:#F9F9FC;font-family:'Outfit',sans-serif;font-size:11.5px;font-weight:700;color:var(--dark);border-right:1px solid #EAEAF0}
 .tov-tr div:last-child{color:var(--muted)}
 .tov-tr div:nth-child(2){border-right:1px solid #EAEAF0}
-
+ 
 /* ── LOGO SECTION ── */
 .logo-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:28px}
 .logo-card{padding:48px 36px;border-radius:4px;display:flex;flex-direction:column;align-items:center;gap:18px;border:1.5px solid #E8E8EE}
@@ -300,7 +421,7 @@ section{position:relative;overflow:hidden}
 .lr-box{padding:22px 26px;background:var(--light);border-radius:4px}
 .lr-title{font-family:'Outfit',sans-serif;font-size:12px;font-weight:700;color:var(--dark);margin-bottom:7px}
 .lr-text{font-size:12.5px;line-height:1.7;color:var(--muted)}
-
+ 
 /* ── COLORS ── */
 .grad-bar{height:88px;background:var(--grad);border-radius:4px;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
 .grad-bar span{font-family:'Outfit',sans-serif;font-size:11px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.8)}
@@ -315,7 +436,7 @@ section{position:relative;overflow:hidden}
 .sw-name{font-family:'Outfit',sans-serif;font-size:11.5px;font-weight:700;color:var(--dark);margin-bottom:2px}
 .sw-hex{font-family:'Outfit',monospace;font-size:10.5px;color:var(--muted);letter-spacing:.04em}
 .sw-role{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:2px}
-
+ 
 /* ── TYPOGRAPHY ── */
 .type-display{padding:48px 52px;border:1.5px solid #E8E8EE;border-radius:4px;margin-bottom:28px}
 .type-micro{font-size:9.5px;letter-spacing:.25em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
@@ -329,7 +450,7 @@ section{position:relative;overflow:hidden}
 .weight-row{font-size:13px;color:var(--dark);padding:7px 0;border-bottom:1px solid #F0F0F6;display:flex;justify-content:space-between}
 .weight-row:last-child{border:none}
 .weight-label{color:var(--muted);font-size:11px}
-
+ 
 /* ── VISUAL STYLE ── */
 .do-dont{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:44px}
 .do-box,.dont-box{padding:32px;border-radius:4px}
@@ -345,7 +466,7 @@ section{position:relative;overflow:hidden}
 .feel-card{background:#fff;padding:22px 14px;text-align:center;border-radius:4px;border:1.5px solid #ECEDF5}
 .feel-word{font-family:'Outfit',sans-serif;font-size:13px;font-weight:800;color:var(--purple);margin-bottom:4px}
 .feel-en{font-size:10.5px;color:var(--muted)}
-
+ 
 /* ── PRINCIPLES ── */
 #principles{padding:0}
 .pr-hero{
@@ -365,7 +486,7 @@ section{position:relative;overflow:hidden}
 .pr-card:hover{background:#1e1e38}
 .pr-word{font-family:'Outfit',sans-serif;font-size:22px;font-weight:900;color:#fff;margin-bottom:10px}
 .pr-desc{font-size:13px;line-height:1.7;color:rgba(255,255,255,.47)}
-
+ 
 /* ── FOOTER ── */
 footer{
   background:var(--navy);padding:44px 80px;
@@ -374,11 +495,35 @@ footer{
 }
 .footer-logo{width:90px;filter:brightness(0) invert(1);opacity:.55}
 .footer-meta{font-family:'Outfit',sans-serif;font-size:10px;color:rgba(255,255,255,.25);letter-spacing:.15em;text-transform:uppercase;text-align:right;line-height:1.9}
-
+ 
+/* ── SOCIAL MEDIA IDEAS ── */
+.sm-ideas{display:flex;flex-direction:column;gap:12px}
+.sm-idea{display:flex;gap:14px;align-items:flex-start;padding:14px 18px;background:var(--light);border-radius:4px;border-left:3px solid var(--pink)}
+.sm-idea-icon{font-size:20px;line-height:1;flex-shrink:0;margin-top:2px}
+.sm-idea-title{font-family:'Outfit',sans-serif;font-size:13px;font-weight:800;color:var(--dark);margin-bottom:4px}
+.sm-idea-text{font-size:12.5px;line-height:1.7;color:var(--muted)}
+ 
+/* ── CLIENT BRANDS ── */
+.clients-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:0}
+.cl-card{padding:32px 28px;border:1.5px solid #ECEDF5;border-radius:4px;transition:border-color .2s,box-shadow .2s}
+.cl-card:hover{border-color:var(--sky);box-shadow:0 4px 24px rgba(41,171,226,.1)}
+.cl-icon{width:44px;height:44px;background:var(--grad);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.cl-title{font-family:'Outfit',sans-serif;font-size:16px;font-weight:800;color:var(--dark);margin-bottom:8px}
+.cl-text{font-size:13px;line-height:1.7;color:var(--muted);margin-bottom:10px}
+.cl-example{font-size:11.5px;font-style:italic;color:var(--purple);padding:6px 10px;background:rgba(123,63,160,.07);border-radius:3px}
+ 
+/* ── PERMISSIONS ── */
+.perms-list{display:flex;flex-direction:column;gap:14px}
+.perm-item{display:flex;gap:20px;align-items:flex-start;padding:24px 26px;background:var(--light);border-radius:4px}
+.perm-num{font-family:'Outfit',sans-serif;font-size:22px;font-weight:900;background:var(--grad-h);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;flex-shrink:0;min-width:28px}
+.perm-title{font-family:'Outfit',sans-serif;font-size:14px;font-weight:800;color:var(--dark);margin-bottom:7px}
+.perm-text{font-size:13px;line-height:1.75;color:var(--muted)}
+.perm-quote{display:block;margin-top:8px;padding:10px 14px;background:#fff;border-left:3px solid var(--pink);border-radius:0 3px 3px 0;font-style:italic;color:var(--mid);line-height:1.7}
+ 
 /* ── KEYFRAMES ── */
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
 @keyframes scaleX{from{opacity:0;transform:scaleX(0)}to{opacity:1;transform:scaleX(1)}}
-
+ 
 /* ── RESPONSIVE ── */
 @media(max-width:1100px){
   .values-grid{grid-template-columns:repeat(3,1fr)}
@@ -393,7 +538,7 @@ footer{
   .hamburger{display:flex}
   .s-inner{padding:64px 40px}
   .usp-pillars,.pr-hero{padding:56px 40px}
-  .arch-wrap,.tov-split,.type-specs,.logo-grid,.logo-rules,.do-dont,.aud-grid,.swatches{grid-template-columns:1fr}
+  .arch-wrap,.tov-split,.type-specs,.logo-grid,.logo-rules,.do-dont,.aud-grid,.swatches,.clients-grid{grid-template-columns:1fr}
   .usp-pillars{grid-template-columns:1fr}
   .usp-p{border-right:none;border-bottom:1px solid #ECEDF5}
   .usp-p:last-child{border-bottom:none}
@@ -413,11 +558,11 @@ footer{
 </style>
 </head>
 <body>
-
+ 
 <button class="hamburger" id="hamburger" aria-label="Open menu">
   <span></span><span></span><span></span>
 </button>
-
+ 
 <!-- ─── SIDEBAR ─── -->
 <nav class="sidebar" id="sidebar">
   <div class="sb-top">
@@ -441,7 +586,8 @@ footer{
     <a class="sb-link" href="#colors"><span class="sb-num">11</span>Colors</a>
     <a class="sb-link" href="#typography"><span class="sb-num">12</span>Typography</a>
     <a class="sb-link" href="#visual"><span class="sb-num">13</span>Visual Style</a>
-    <a class="sb-link" href="#principles"><span class="sb-num">14</span>Principles</a>
+    <a class="sb-link" href="#clients"><span class="sb-num">14</span>Client Brands</a>
+    <a class="sb-link" href="#principles"><span class="sb-num">15</span>Principles</a>
   </div>
   <div class="sb-progress"><div class="sb-progress-fill" id="sbFill" style="height:0%"></div></div>
   <div class="sb-foot">
@@ -449,10 +595,10 @@ footer{
     www.ambigram.gr · February 2026
   </div>
 </nav>
-
+ 
 <!-- ─── MAIN ─── -->
 <main class="main">
-
+ 
 <!-- 01 HERO -->
 <section id="hero">
   <div class="hero-mesh"></div>
@@ -470,7 +616,7 @@ footer{
     </div>
   </div>
 </section>
-
+ 
 <!-- 02 BRAND VISION -->
 <section class="s-white" id="vision">
   <div class="wm">02</div>
@@ -487,7 +633,7 @@ footer{
     </div>
   </div>
 </section>
-
+ 
 <!-- 03 MISSION -->
 <section class="s-dark" id="mission">
   <div class="wm">03</div>
@@ -497,7 +643,7 @@ footer{
     <p class="mission-big rv">Με <strong>ισχυρό αξιακό κώδικα</strong> και <strong>σεβασμό προς τον άνθρωπο</strong>, δημιουργούμε σύγχρονες λύσεις συσκευασίας που ενισχύουν την ανταγωνιστικότητα των ελληνικών επιχειρήσεων, επενδύοντας στους ανθρώπους μας και στη θετική κοινωνική συμβολή.</p>
   </div>
 </section>
-
+ 
 <!-- 04 TARGET AUDIENCE -->
 <section class="s-dark" id="audience">
   <div class="wm">04</div>
@@ -524,7 +670,7 @@ footer{
     </div>
   </div>
 </section>
-
+ 
 <!-- 05 USP -->
 <section id="usp">
   <div class="usp-hero">
@@ -541,7 +687,7 @@ footer{
     <div class="usp-p rv"><div class="usp-p-num">03</div><div class="usp-p-title">Added value positioning</div><div class="usp-p-text">Προσθέτουμε αξία στο brand του πελάτη — όχι απλά συσκευασία.</div></div>
   </div>
 </section>
-
+ 
 <!-- 06 3A PHILOSOPHY -->
 <section class="s-white" id="framework">
   <div class="wm">3Α</div>
@@ -581,7 +727,7 @@ footer{
     </div>
   </div>
 </section>
-
+ 
 <!-- 07 BRAND VALUES -->
 <section class="s-dark" id="values">
   <div class="s-inner" style="padding-bottom:0">
@@ -597,7 +743,7 @@ footer{
     <div class="val"><div class="val-n">05</div><div class="val-bar"></div><div class="val-title">Υπεύθυνη συμβολή</div><div class="val-text">Ρόλος στην ελληνική παραγωγικότητα και θετική επίδραση στην κοινωνία.</div></div>
   </div>
 </section>
-
+ 
 <!-- 08 PERSONALITY -->
 <section class="s-white" id="personality">
   <div class="wm">08</div>
@@ -625,12 +771,27 @@ footer{
         <div style="font-family:'Outfit',sans-serif;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--purple);margin-bottom:14px">Brand in Action</div>
         <div class="bia-card"><div class="bia-head">Σε περίπτωση παραπόνου</div><div class="bia-body"><div class="bia-tag">Ψύχραιμη, προσανατολισμένη στη λύση.</div><div class="bia-quote">«Κατανοούμε τη δυσκολία που προέκυψε. Είμαστε ήδη πάνω από το πρόβλημα για να διασφαλίσουμε ότι το αποτέλεσμα θα είναι αυτό που αξίζει το brand σας.»</div></div></div>
         <div class="bia-card"><div class="bia-head">Σε παρουσίαση νέου προϊόντος</div><div class="bia-body"><div class="bia-tag">Ενθουσιώδης αλλά τεχνοκρατική.</div><div class="bia-quote">«Η νέα σειρά X συνδυάζει 30% μεγαλύτερη αντοχή με 100% ανακυκλώσιμα υλικά — η εικόνα ποιότητας που αξίζει το brand σας.»</div></div></div>
-        <div class="bia-card"><div class="bia-head">Στα Social Media</div><div class="bia-body"><div class="bia-tag">Expert του κλάδου που μοιράζεται insights.</div><div class="bia-quote">«Xenos Packaging. Συσκευασίες που διαφημίζουν το brand σας... κάθε μέρα.»</div></div></div>
+        <div class="bia-card"><div class="bia-head">Στα Social Media</div><div class="bia-body"><div class="bia-tag">Expert του κλάδου — επαγγελματικές αλλά προσιτές αναρτήσεις. Δεν δείχνουμε «κρύα» μηχανήματα. Δείχνουμε το αποτέλεσμα.</div><div class="bia-quote">«Xenos Packaging. Συσκευασίες που διαφημίζουν το brand σας... κάθε μέρα.»</div></div></div>
+        <div style="font-family:'Outfit',sans-serif;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--purple);margin:18px 0 12px">Παραδείγματα Social Media Content</div>
+        <div class="sm-ideas">
+          <div class="sm-idea">
+            <div class="sm-idea-icon">📷</div>
+            <div><div class="sm-idea-title">Photo — Texture &amp; Finish</div><div class="sm-idea-text">Χέρι που κρατά τυπωμένη σακούλα πελάτη με έμφαση στην υφή και το φινίρισμα. Το brand του πελάτη πρωταγωνιστεί.</div></div>
+          </div>
+          <div class="sm-idea">
+            <div class="sm-idea-icon">🎨</div>
+            <div><div class="sm-idea-title">Post — Pantone Accuracy</div><div class="sm-idea-text">Ανοιχτή βεντάλια Pantone: <em>«Όποιο χρώμα κι αν εκπροσωπεί το brand σας, το τυπώνουμε με 95% ακρίβεια Pantone.»</em></div></div>
+          </div>
+          <div class="sm-idea">
+            <div class="sm-idea-icon">🎬</div>
+            <div><div class="sm-idea-title">Video Concept — The Bag That Replaced the Purse</div><div class="sm-idea-text">Γυναίκα αγοράζει γυαλιά σε κατάστημα οπτικών, πάει σπίτι — fast forward — τη βλέπουμε να διπλώνει «με ευλάβεια» τη χάρτινη σακούλα και την επόμενη μέρα να βγαίνει με κινητό, πορτοφόλι και lip gloss μέσα... χωρίς τσάντα! <em>Caption: «Τόσο όμορφή είναι η χάρτινη σακούλα του καταστήματος οπτικών που αντικαθιστά την τσάντα της!»</em></div></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
-
+ 
 <!-- 09 TONE OF VOICE -->
 <section class="s-light" id="voice">
   <div class="wm">09</div>
@@ -676,11 +837,13 @@ footer{
         <div class="tov-tr"><div>Email Επιβεβαίωσης</div><div>«Η παραγγελία σας δρομολογήθηκε. Σας ευχαριστούμε.»</div><div>«Λάβαμε την κατάθεση. Σας στέλνουμε τα προϊόντα.»</div></div>
         <div class="tov-tr"><div>Social Media</div><div>«Πίσω από κάθε επιτυχημένο brand, κρύβεται μια συσκευασία που φτιάχτηκε με υπευθυνότητα.»</div><div>«Η εταιρεία μας διαθέτει σύγχρονα μηχανήματα παραγωγής.»</div></div>
         <div class="tov-tr"><div>Αποτυχία Παράδοσης</div><div>«Λυπούμαστε για την καθυστέρηση, καταβάλλουμε κάθε δυνατή προσπάθεια...»</div><div>«Φταίει η μεταφορική, δεν μπορούμε να κάνουμε κάτι.»</div></div>
+        <div class="tov-tr"><div>Newsletter<br><span style="font-weight:400;font-size:11px;color:var(--muted)">(Ενικός)</span></div><div>«Θέλεις να αναβαθμίσεις τη συσκευασία της επιχείρησής σου;»<br><br><em style="font-size:11px;color:var(--muted)">ή</em><br><br>«Θέλουμε να δούμε την επιχείρησή σου να ξεχωρίζει. Δες πώς οι νέες λύσεις μας προσθέτουν αξία στο προϊόν σου.»</div><div>«Οι πιο ποιοτικές συσκευασίες της αγοράς»</div></div>
+        <div class="tov-tr"><div>Επιβεβαίωση Παραγγελίας</div><div>«Ευχαριστούμε για την εμπιστοσύνη. Ξεκινάμε την παραγωγή για να φτάσει το αποτέλεσμα στα χέρια σας όπως το φανταστήκατε.»</div><div>«Η παραγγελία σας με αριθμό #1234 καταχωρήθηκε επιτυχώς στο σύστημά μας.»</div></div>
       </div>
     </div>
   </div>
 </section>
-
+ 
 <!-- 10 LOGO -->
 <section class="s-white" id="logo">
   <div class="wm">10</div>
@@ -700,7 +863,7 @@ footer{
     </div>
   </div>
 </section>
-
+ 
 <!-- 11 COLORS -->
 <section class="s-light" id="colors">
   <div class="wm">11</div>
@@ -724,7 +887,7 @@ footer{
     </div>
   </div>
 </section>
-
+ 
 <!-- 12 TYPOGRAPHY -->
 <section class="s-white" id="typography">
   <div class="wm">12</div>
@@ -761,7 +924,7 @@ footer{
     </div>
   </div>
 </section>
-
+ 
 <!-- 13 VISUAL STYLE -->
 <section class="s-light" id="visual">
   <div class="wm">13</div>
@@ -785,13 +948,86 @@ footer{
     </div>
   </div>
 </section>
-
-<!-- 14 DESIGN PRINCIPLES -->
+ 
+ 
+<!-- 14 CLIENT BRANDS -->
+<section class="s-white" id="clients">
+  <div class="wm">14</div>
+  <div class="s-inner">
+    <div class="s-eyebrow rv">14 — Client Brands</div>
+    <h2 class="s-title rv">Χρήση Brands Πελατών</h2>
+    <p class="s-lead rv">Η προβολή μεγάλων πελατών είναι ένα από τα ισχυρότερα «παράσημα» αξιοπιστίας — αλλά χρειάζεται σωστή διαχείριση.</p>
+ 
+    <div class="clients-grid rv">
+      <div class="cl-card">
+        <div class="cl-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <div class="cl-title">Πρακτική Προβολή</div>
+        <div class="cl-text">Mockups ή high-end φωτογραφίες των προϊόντων τους στα sections «Οι Συνεργάτες μας» ή «Case Studies».</div>
+        <div class="cl-example">π.χ. Praktiker — προβολή σακούλας στο ράφι</div>
+      </div>
+      <div class="cl-card">
+        <div class="cl-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        </div>
+        <div class="cl-title">Φωτογραφία Lifestyle</div>
+        <div class="cl-text">Όχι μια απλή σακούλα στο κενό. Φωτογραφία lifestyle που δείχνει τη σακούλα γεμάτη προϊόντα — υποδηλώνοντας <strong>αντοχή</strong> και αξία.</div>
+        <div class="cl-example">π.χ. Σακούλα Praktiker γεμάτη προϊόντα — έμφαση στην αντοχή</div>
+      </div>
+      <div class="cl-card">
+        <div class="cl-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <div class="cl-title">Case Study</div>
+        <div class="cl-text">«Πώς η Xenos υποστηρίζει τις ανάγκες ενός εθνικού δικτύου όπως η <strong>Praktiker</strong>, εξασφαλίζοντας σταθερή ποιότητα σε μεγάλους όγκους.»</div>
+        <div class="cl-example">Εστίαση στη σταθερότητα ποιότητας σε scale</div>
+      </div>
+    </div>
+ 
+    <!-- Permissions -->
+    <div class="rv" style="margin-top:56px">
+      <div style="font-family:'Outfit',sans-serif;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--purple);margin-bottom:24px">Permissions — Πώς ζητάμε άδεια</div>
+      <div class="perms-list">
+        <div class="perm-item">
+          <div class="perm-num">1</div>
+          <div>
+            <div class="perm-title">Σύμβαση / Παραγγελία</div>
+            <div class="perm-text">Η υπογεγραμμένη σύμβαση / δελτίο παραγγελίας μπορεί να αναφέρει ότι επιτρέπεται η χρήση του τελικού αποτελέσματος για διαφημιστικούς σκοπούς της Xenos Packaging και του πελάτη.</div>
+          </div>
+        </div>
+        <div class="perm-item">
+          <div class="perm-num">2</div>
+          <div>
+            <div class="perm-title">Γραπτή Έγκριση</div>
+            <div class="perm-text">Email στον πελάτη:<br><em class="perm-quote">«Είμαστε πολύ περήφανοι με το αποτέλεσμα της συνεργασίας μας και θα θέλαμε να συμπεριλάβουμε τη συσκευασία που δημιουργήσαμε μαζί στο portfolio μας. Σας ευχαριστούμε.»</em></div>
+          </div>
+        </div>
+        <div class="perm-item">
+          <div class="perm-num">3</div>
+          <div>
+            <div class="perm-title">Co-branding</div>
+            <div class="perm-text">Προσοχή! Πάντα παρουσιάζουμε το brand τους με σεβασμό στα δικά τους brand guidelines — σωστά χρώματα, κενά γύρω από το λογότυπο κ.λπ.</div>
+          </div>
+        </div>
+        <div class="perm-item">
+          <div class="perm-num">4</div>
+          <div>
+            <div class="perm-title">Προφορική Επαφή + Follow-up Email</div>
+            <div class="perm-text">Επειδή η σχέση με τον πελάτη βασίζεται συχνά στη «Πολύχρονη συνεργασία», μια απλή επικοινωνία με τον υπεύθυνο του πελάτη αρκεί:<br><em class="perm-quote">«Θέλουμε να αναδείξουμε την εξαιρετική δουλειά που κάνουμε μαζί στο site και στα social media μας. Έχετε αντίρρηση να χρησιμοποιήσουμε μια επαγγελματική φωτογραφία της συσκευασίας σας;»</em><br><br>Συνήθως, τα brands το δέχονται ως δωρεάν προβολή. Στέλνουμε και follow-up email:<br><em class="perm-quote">«Σας ευχαριστούμε που μας δίνετε την ευκαιρία να αναδείξουμε την εξαιρετική δουλειά που κάνουμε μαζί στο site και στα social media μας.»</em></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- 15 DESIGN PRINCIPLES -->
 <section id="principles">
   <div class="pr-hero">
     <div class="pr-noise"></div>
     <div class="pr-inner">
-      <div class="pr-eye rv">14 — The Big Idea</div>
+      <div class="pr-eye rv">15 — The Big Idea</div>
       <div class="manifesto rv"><span class="strike">δεν πρόκειται για τον φθηνότερο προμηθευτή</span><br>αλλά για<br><span class="hl">τον καλύτερο συνεργάτη!</span></div>
       <p class="manifesto-sub rv">Κάθε σημείο επαφής του brand πρέπει να αντανακλά αυτή την υπόσχεση: <strong style="color:#fff">αξιοπιστία, ουσία και ανθρώπινο πρόσωπο</strong>.</p>
     </div>
@@ -805,32 +1041,32 @@ footer{
     <div class="pr-card"><div class="pr-word">Συνεπές</div><div class="pr-desc">Ενιαίο ύφος σε όλα τα κανάλια — ο πελάτης αναγνωρίζει το brand παντού.</div></div>
   </div>
 </section>
-
+ 
 <footer>
   <img src="data:image/png;base64,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" alt="Xenos Packaging" class="footer-logo"/>
   <div class="footer-meta">Brand Guidelines 2026<br>Prepared by Ambigram · ambigram.gr · February 2026</div>
 </footer>
-
+ 
 </main>
-
+ 
 <script>
-const sIds = ['hero','vision','mission','audience','usp','framework','values','personality','voice','logo','colors','typography','visual','principles'];
-
+const sIds = ['hero','vision','mission','audience','usp','framework','values','personality','voice','logo','colors','typography','visual','clients','principles'];
+ 
 // Hamburger
 const hamburger = document.getElementById('hamburger');
 const sidebar = document.getElementById('sidebar');
 hamburger.addEventListener('click', () => sidebar.classList.toggle('open'));
 document.querySelectorAll('.sb-link').forEach(a => a.addEventListener('click', () => sidebar.classList.remove('open')));
-
+ 
 // Scroll: active nav + progress fill
 const sbFill = document.getElementById('sbFill');
 const sbLinks = document.querySelectorAll('.sb-link');
-
+ 
 function onScroll() {
   const scrollY = window.scrollY;
   const docH = document.documentElement.scrollHeight - window.innerHeight;
   sbFill.style.height = (scrollY / docH * 100) + '%';
-
+ 
   let current = sIds[0];
   sIds.forEach(id => {
     const el = document.getElementById(id);
@@ -838,10 +1074,10 @@ function onScroll() {
   });
   sbLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
 }
-
+ 
 window.addEventListener('scroll', onScroll, {passive:true});
 onScroll();
-
+ 
 // Reveal
 const rvEls = document.querySelectorAll('.rv');
 const io = new IntersectionObserver(entries => {
