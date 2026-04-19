@@ -10,19 +10,29 @@
 <style>
 /* ── TOKENS ── */
 :root {
-  --pink:    #E5179E;
-  --cyan:    #29ABE2;
-  --purple:  #7B3FA0;
-  --sky:     #4DB8E8;
-  --lav:     #8B6BAE;
-  --navy:    #0D0D22;
-  --dark:    #1A1A2E;
+  /* Primary brand colors */
+  --pink:    #C93978;   /* Primary — Magenta */
+  --magenta: #A12B5F;   /* Deep magenta */
+  --purple:  #7A27A3;   /* Deep purple */
+  --lav:     #AE5BD7;   /* Lavender */
+  --cyan:    #2087E5;   /* Primary — Blue */
+  --sky:     #64B5F5;   /* Sky blue */
+  --deepblue:#0E47A1;   /* Deep blue */
+  --indigo:  #111990;   /* Indigo */
+  --amber:   #D09258;   /* Warm accent */
+  --terra:   #A96323;   /* Earthy terracotta */
+  --sage:    #40A281;   /* Sage green */
+  --fern:    #266851;   /* Deep green */
+  /* Neutrals */
+  --navy:    #070A33;   /* Darkest — signature */
+  --dark:    #201541;   /* Deep ink */
   --mid:     #4A4A6A;
   --muted:   #8888AA;
   --light:   #F5F5FA;
   --white:   #FFFFFF;
-  --grad:    linear-gradient(135deg,#E5179E 0%,#9B4DBE 50%,#29ABE2 100%);
-  --grad-h:  linear-gradient(90deg,#E5179E 0%,#9B4DBE 50%,#29ABE2 100%);
+  /* Signature gradient */
+  --grad:    linear-gradient(135deg,#C93978 0%,#7A27A3 50%,#2087E5 100%);
+  --grad-h:  linear-gradient(90deg,#C93978 0%,#7A27A3 50%,#2087E5 100%);
   --ease:    cubic-bezier(.22,.68,0,1.2);
   --sb:      260px;
 }
@@ -76,7 +86,7 @@ body{font-family:'Noto Sans',sans-serif;background:var(--white);color:var(--dark
   transition:color .2s,border-color .2s,background .2s;
 }
 .sb-link:hover{color:rgba(255,255,255,.82);background:rgba(255,255,255,.04)}
-.sb-link.active{color:#fff;border-left-color:var(--pink);background:rgba(255,255,255,.05)}
+.sb-link.active{color:#fff;border-left-color:var(--pink);background:rgba(201,57,120,.08)}
 .sb-num{font-size:9px;opacity:.35;min-width:20px;font-family:'Outfit',sans-serif}
 .sb-foot{
   padding:20px 28px;
@@ -115,9 +125,9 @@ body{font-family:'Noto Sans',sans-serif;background:var(--white);color:var(--dark
 .hero-mesh{
   position:absolute;inset:0;
   background:
-    radial-gradient(ellipse 80% 60% at 20% 40%, rgba(229,23,158,.35) 0%, transparent 60%),
-    radial-gradient(ellipse 70% 50% at 80% 30%, rgba(41,171,226,.25) 0%, transparent 55%),
-    radial-gradient(ellipse 50% 40% at 55% 80%, rgba(123,63,160,.3) 0%, transparent 50%);
+    radial-gradient(ellipse 80% 60% at 20% 40%, rgba(201,57,120,.38) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 80% 30%, rgba(32,135,229,.28) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 55% 80%, rgba(122,39,163,.32) 0%, transparent 50%);
 }
 .hero-grid{
   position:absolute;inset:0;
@@ -201,17 +211,17 @@ section{position:relative;overflow:hidden}
 /* ── AUDIENCE ── */
 .aud-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .aud-card{padding:36px;border-radius:4px}
-.aud-ok{background:rgba(77,184,232,.07);border:1.5px solid rgba(77,184,232,.22)}
-.aud-no{background:rgba(231,76,60,.06);border:1.5px solid rgba(231,76,60,.18)}
+.aud-ok{background:rgba(100,181,245,.07);border:1.5px solid rgba(100,181,245,.24)}
+.aud-no{background:rgba(169,99,35,.06);border:1.5px solid rgba(169,99,35,.18)}
 .aud-badge{display:inline-block;font-family:'Outfit',sans-serif;font-size:9px;font-weight:800;letter-spacing:.3em;text-transform:uppercase;padding:5px 12px;border-radius:2px;margin-bottom:18px}
 .aud-ok .aud-badge{background:var(--sky);color:#fff}
-.aud-no .aud-badge{background:#E74C3C;color:#fff}
+.aud-no .aud-badge{background:var(--terra);color:#fff}
 .aud-title{font-family:'Outfit',sans-serif;font-size:19px;font-weight:800;color:#fff;margin-bottom:10px}
 .aud-text{font-size:13.5px;line-height:1.75;color:rgba(255,255,255,.55)}
 .aud-items{margin-top:18px;display:flex;flex-direction:column;gap:10px}
 .aud-item{padding:12px 16px;background:rgba(255,255,255,.05);border-left:3px solid var(--sky);font-size:12.5px;color:rgba(255,255,255,.65);line-height:1.6}
-.aud-no .aud-item{border-left-color:#E74C3C}
-.aud-quote{margin-top:18px;padding:14px;background:rgba(231,76,60,.08);border-radius:4px;font-size:12px;color:rgba(255,255,255,.38);font-style:italic;line-height:1.75}
+.aud-no .aud-item{border-left-color:var(--terra)}
+.aud-quote{margin-top:18px;padding:14px;background:rgba(169,99,35,.1);border-radius:4px;font-size:12px;color:rgba(255,255,255,.42);font-style:italic;line-height:1.75}
 
 /* ── USP ── */
 #usp{padding:0}
@@ -268,13 +278,13 @@ section{position:relative;overflow:hidden}
 .tov-chip{font-family:'Outfit',sans-serif;font-size:17px;font-weight:800;padding:10px 20px;background:var(--lav);color:#fff;border-radius:2px}
 .tov-split{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-bottom:48px}
 .tov-col-label{font-family:'Outfit',sans-serif;font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;margin-bottom:14px}
-.tov-col-label.do{color:#27AE60}
-.tov-col-label.dont{color:#E74C3C}
+.tov-col-label.do{color:var(--sage)}
+.tov-col-label.dont{color:var(--terra)}
 .tov-list{list-style:none}
 .tov-list li{padding:10px 0 10px 18px;border-bottom:1px solid #EAEAF0;font-size:13px;line-height:1.6;color:var(--dark);position:relative}
 .tov-list li::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:5px;height:5px;border-radius:50%}
-.tov-do li::before{background:#27AE60}
-.tov-dont li::before{background:#E74C3C}
+.tov-do li::before{background:var(--sage)}
+.tov-dont li::before{background:var(--terra)}
 .tov-dont li{color:var(--muted)}
 .tov-table{border:1.5px solid #E8E8EE;border-radius:6px;overflow:hidden;font-size:12.5px}
 .tov-th{display:grid;grid-template-columns:160px 1fr 1fr;background:var(--navy);color:#fff}
@@ -304,7 +314,7 @@ section{position:relative;overflow:hidden}
 /* ── COLORS ── */
 .grad-bar{height:88px;background:var(--grad);border-radius:4px;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
 .grad-bar span{font-family:'Outfit',sans-serif;font-size:11px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.8)}
-.grad-meta{display:flex;justify-content:space-between;align-items:center;padding:0 4px;margin-bottom:36px}
+.grad-meta{display:flex;justify-content:space-between;align-items:center;padding:0 4px;margin-bottom:48px}
 .grad-name{font-family:'Outfit',sans-serif;font-size:12.5px;font-weight:700;color:var(--dark)}
 .grad-code{font-family:'Outfit',monospace;font-size:11px;color:var(--muted)}
 .swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
@@ -315,6 +325,23 @@ section{position:relative;overflow:hidden}
 .sw-name{font-family:'Outfit',sans-serif;font-size:11.5px;font-weight:700;color:var(--dark);margin-bottom:2px}
 .sw-hex{font-family:'Outfit',monospace;font-size:10.5px;color:var(--muted);letter-spacing:.04em}
 .sw-role{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:2px}
+/* Extended palette families */
+.palette-families{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px;margin-bottom:48px}
+.pfam{background:#fff;border:1px solid #EAEAF0;border-radius:6px;overflow:hidden}
+.pfam-head{padding:14px 16px;border-bottom:1px solid #EAEAF0;background:#FAFAFD}
+.pfam-name{font-family:'Outfit',sans-serif;font-size:12px;font-weight:800;color:var(--dark);letter-spacing:.04em}
+.pfam-role{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.18em;margin-top:3px}
+.pfam-stack{display:flex;flex-direction:column}
+.pfam-chip{display:flex;align-items:center;justify-content:space-between;padding:11px 16px;font-family:'Outfit',monospace;font-size:10.5px;color:rgba(255,255,255,.92);letter-spacing:.05em;border-bottom:1px solid rgba(255,255,255,.08)}
+.pfam-chip:last-child{border-bottom:none}
+.pfam-chip .tint{font-size:9px;opacity:.7;text-transform:uppercase;letter-spacing:.14em}
+.pfam-chip.light{color:rgba(0,0,0,.62)}
+.pfam-chip.light .tint{opacity:.55}
+.usage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:12px}
+.usage-card{padding:20px;border:1px solid #EAEAF0;border-radius:6px;background:#fff}
+.usage-card .uc-label{font-family:'Outfit',sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--purple);margin-bottom:10px}
+.usage-card .uc-title{font-family:'Outfit',sans-serif;font-size:14px;font-weight:800;color:var(--dark);margin-bottom:6px}
+.usage-card .uc-text{font-size:12px;line-height:1.65;color:var(--mid)}
 
 /* ── TYPOGRAPHY ── */
 .type-display{padding:48px 52px;border:1.5px solid #E8E8EE;border-radius:4px;margin-bottom:28px}
@@ -333,11 +360,11 @@ section{position:relative;overflow:hidden}
 /* ── VISUAL STYLE ── */
 .do-dont{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:44px}
 .do-box,.dont-box{padding:32px;border-radius:4px}
-.do-box{background:#F0FBF4;border:1.5px solid #B2DFC0}
-.dont-box{background:#FFF2F2;border:1.5px solid #F0BBBB}
+.do-box{background:#EFF7F2;border:1.5px solid #B8D9C6}
+.dont-box{background:#FBF2EA;border:1.5px solid #E2C6A8}
 .dd-badge{display:inline-block;font-family:'Outfit',sans-serif;font-size:9px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;padding:5px 11px;border-radius:2px;margin-bottom:18px}
-.do-box .dd-badge{background:#27AE60;color:#fff}
-.dont-box .dd-badge{background:#E74C3C;color:#fff}
+.do-box .dd-badge{background:var(--sage);color:#fff}
+.dont-box .dd-badge{background:var(--terra);color:#fff}
 .dd-list{list-style:none}
 .dd-list li{font-size:13px;line-height:1.65;color:var(--dark);padding:8px 0;border-bottom:1px solid rgba(0,0,0,.05)}
 .dont-box .dd-list li{color:var(--muted)}
@@ -375,30 +402,6 @@ footer{
 .footer-logo{width:90px;filter:brightness(0) invert(1);opacity:.55}
 .footer-meta{font-family:'Outfit',sans-serif;font-size:10px;color:rgba(255,255,255,.25);letter-spacing:.15em;text-transform:uppercase;text-align:right;line-height:1.9}
 
-/* ── SOCIAL MEDIA IDEAS ── */
-.sm-ideas{display:flex;flex-direction:column;gap:12px}
-.sm-idea{display:flex;gap:14px;align-items:flex-start;padding:14px 18px;background:var(--light);border-radius:4px;border-left:3px solid var(--pink)}
-.sm-idea-icon{font-size:20px;line-height:1;flex-shrink:0;margin-top:2px}
-.sm-idea-title{font-family:'Outfit',sans-serif;font-size:13px;font-weight:800;color:var(--dark);margin-bottom:4px}
-.sm-idea-text{font-size:12.5px;line-height:1.7;color:var(--muted)}
-
-/* ── CLIENT BRANDS ── */
-.clients-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:0}
-.cl-card{padding:32px 28px;border:1.5px solid #ECEDF5;border-radius:4px;transition:border-color .2s,box-shadow .2s}
-.cl-card:hover{border-color:var(--sky);box-shadow:0 4px 24px rgba(41,171,226,.1)}
-.cl-icon{width:44px;height:44px;background:var(--grad);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
-.cl-title{font-family:'Outfit',sans-serif;font-size:16px;font-weight:800;color:var(--dark);margin-bottom:8px}
-.cl-text{font-size:13px;line-height:1.7;color:var(--muted);margin-bottom:10px}
-.cl-example{font-size:11.5px;font-style:italic;color:var(--purple);padding:6px 10px;background:rgba(123,63,160,.07);border-radius:3px}
-
-/* ── PERMISSIONS ── */
-.perms-list{display:flex;flex-direction:column;gap:14px}
-.perm-item{display:flex;gap:20px;align-items:flex-start;padding:24px 26px;background:var(--light);border-radius:4px}
-.perm-num{font-family:'Outfit',sans-serif;font-size:22px;font-weight:900;background:var(--grad-h);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;flex-shrink:0;min-width:28px}
-.perm-title{font-family:'Outfit',sans-serif;font-size:14px;font-weight:800;color:var(--dark);margin-bottom:7px}
-.perm-text{font-size:13px;line-height:1.75;color:var(--muted)}
-.perm-quote{display:block;margin-top:8px;padding:10px 14px;background:#fff;border-left:3px solid var(--pink);border-radius:0 3px 3px 0;font-style:italic;color:var(--mid);line-height:1.7}
-
 /* ── KEYFRAMES ── */
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
 @keyframes scaleX{from{opacity:0;transform:scaleX(0)}to{opacity:1;transform:scaleX(1)}}
@@ -417,7 +420,7 @@ footer{
   .hamburger{display:flex}
   .s-inner{padding:64px 40px}
   .usp-pillars,.pr-hero{padding:56px 40px}
-  .arch-wrap,.tov-split,.type-specs,.logo-grid,.logo-rules,.do-dont,.aud-grid,.swatches,.clients-grid{grid-template-columns:1fr}
+  .arch-wrap,.tov-split,.type-specs,.logo-grid,.logo-rules,.do-dont,.aud-grid,.swatches,.palette-families,.usage-grid{grid-template-columns:1fr}
   .usp-pillars{grid-template-columns:1fr}
   .usp-p{border-right:none;border-bottom:1px solid #ECEDF5}
   .usp-p:last-child{border-bottom:none}
@@ -434,6 +437,51 @@ footer{
   .usp-claim{font-size:36px}
   .manifesto{font-size:26px}
 }
+
+/* ── CORPORATE PROFILE SECTION ── */
+.corp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-bottom:52px}
+.corp-card{background:#fff;border:1px solid #E8E8F0;border-radius:2px;padding:28px 26px;position:relative;overflow:hidden}
+.corp-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--grad)}
+.corp-card-icon{font-size:22px;margin-bottom:12px}
+.corp-card-title{font-family:'Outfit',sans-serif;font-size:13px;font-weight:800;color:var(--purple);letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px}
+.corp-card-text{font-size:13px;line-height:1.75;color:var(--mid)}
+.corp-card-text strong{color:var(--dark);font-weight:600}
+
+.awards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:52px}
+.award-item{background:var(--navy);padding:24px 20px;border-radius:2px;text-align:center}
+.award-num{font-family:'Outfit',sans-serif;font-size:32px;font-weight:900;line-height:1;margin-bottom:6px}
+.award-num span{background:var(--grad-h);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.award-label{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.45);line-height:1.5}
+
+.tradeof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#E8E8F0;margin-bottom:52px}
+.tradeof-cell{background:#fff;padding:24px 20px;text-align:center}
+.tradeof-eq{font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;color:var(--dark);margin-bottom:8px;line-height:1.5}
+.tradeof-result{font-family:'Outfit',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;display:inline-block;margin-top:4px}
+.tradeof-result.high{color:var(--pink);background:rgba(201,57,120,.08)}
+.tradeof-result.slow{color:var(--purple);background:rgba(122,39,163,.08)}
+.tradeof-result.low{color:var(--cyan);background:rgba(32,135,229,.08)}
+
+.service-steps{display:flex;flex-direction:column;gap:12px;margin-bottom:52px}
+.svc-step{display:flex;align-items:flex-start;gap:20px;background:#fff;border:1px solid #E8E8F0;padding:20px 24px}
+.svc-step-num{font-family:'Outfit',sans-serif;font-size:11px;font-weight:700;letter-spacing:.2em;color:rgba(255,255,255,.7);background:var(--grad);padding:4px 10px;white-space:nowrap;flex-shrink:0;margin-top:2px}
+.svc-step-body{}
+.svc-step-title{font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;color:var(--dark);margin-bottom:4px}
+.svc-step-text{font-size:13px;line-height:1.7;color:var(--mid)}
+.svc-step-quote{font-size:12px;color:var(--muted);font-style:italic;margin-top:6px;border-left:2px solid var(--pink);padding-left:10px}
+
+.price-insight{background:var(--navy);padding:36px 40px;margin-bottom:52px;position:relative;overflow:hidden}
+.price-insight-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 80% 50%,rgba(201,57,120,.18) 0%,transparent 60%)}
+.price-insight-body{position:relative;z-index:1}
+.price-insight-title{font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:16px}
+.price-insight-headline{font-family:'Outfit',sans-serif;font-size:clamp(18px,2.4vw,28px);font-weight:300;line-height:1.5;color:#fff;max-width:700px;margin-bottom:20px}
+.price-insight-headline strong{font-weight:800;background:var(--grad-h);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.price-example{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.px-item{font-family:'Outfit',sans-serif;text-align:center}
+.px-num{font-size:clamp(28px,3vw,40px);font-weight:900;line-height:1}
+.px-num.accent{background:var(--grad-h);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.px-label{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-top:4px}
+.px-arrow{font-size:24px;color:rgba(255,255,255,.25);font-weight:300}
+
 </style>
 </head>
 <body>
@@ -466,7 +514,8 @@ footer{
     <a class="sb-link" href="#typography"><span class="sb-num">12</span>Typography</a>
     <a class="sb-link" href="#visual"><span class="sb-num">13</span>Visual Style</a>
     <a class="sb-link" href="#clients"><span class="sb-num">14</span>Client Brands</a>
-    <a class="sb-link" href="#principles"><span class="sb-num">15</span>Principles</a>
+<a class="sb-link" href="#corporate"><span class="sb-num">15</span>Εταιρικό Προφίλ</a>
+<a class="sb-link" href="#principles"><span class="sb-num">16</span>Principles</a>
   </div>
   <div class="sb-progress"><div class="sb-progress-fill" id="sbFill" style="height:0%"></div></div>
   <div class="sb-foot">
@@ -579,21 +628,21 @@ footer{
         <svg viewBox="0 0 480 440" xmlns="http://www.w3.org/2000/svg" style="width:100%">
           <defs>
             <linearGradient id="tg" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#E5179E"/>
-              <stop offset="50%" stop-color="#9B4DBE"/>
-              <stop offset="100%" stop-color="#29ABE2"/>
+              <stop offset="0%" stop-color="#C93978"/>
+              <stop offset="50%" stop-color="#7A27A3"/>
+              <stop offset="100%" stop-color="#2087E5"/>
             </linearGradient>
           </defs>
           <polygon points="240,30 20,400 460,400" fill="url(#tg)" opacity=".88"/>
           <text x="240" y="250" text-anchor="middle" font-family="Outfit,sans-serif" font-size="12" font-weight="500" fill="rgba(255,255,255,0.65)" letter-spacing="3">XENOS PACKAGING</text>
           <text x="240" y="318" text-anchor="middle" font-family="Outfit,sans-serif" font-size="76" font-weight="900" fill="white">3Α</text>
-          <rect x="152" y="2" width="176" height="64" rx="5" fill="#4DB8E8"/>
+          <rect x="152" y="2" width="176" height="64" rx="5" fill="#64B5F5"/>
           <text x="240" y="26" text-anchor="middle" font-family="Outfit,sans-serif" font-size="22" font-weight="900" fill="white">Α<tspan font-size="13" font-weight="400">ΠΟΤΕΛΕΣΜΑ</tspan></text>
           <text x="240" y="50" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11" fill="rgba(255,255,255,0.75)">[προϊόν]</text>
-          <rect x="0" y="380" width="168" height="60" rx="5" fill="#4DB8E8"/>
+          <rect x="0" y="380" width="168" height="60" rx="5" fill="#64B5F5"/>
           <text x="84" y="402" text-anchor="middle" font-family="Outfit,sans-serif" font-size="22" font-weight="900" fill="white">Α<tspan font-size="13" font-weight="400">ΞΙΕΣ</tspan></text>
           <text x="84" y="424" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11" fill="rgba(255,255,255,0.75)">[ήθος]</text>
-          <rect x="312" y="380" width="168" height="60" rx="5" fill="#4DB8E8"/>
+          <rect x="312" y="380" width="168" height="60" rx="5" fill="#64B5F5"/>
           <text x="396" y="402" text-anchor="middle" font-family="Outfit,sans-serif" font-size="22" font-weight="900" fill="white">Α<tspan font-size="13" font-weight="400">ΝΘΡΩΠΟΙ</tspan></text>
           <text x="396" y="424" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11" fill="rgba(255,255,255,0.75)">[συνεργασία]</text>
         </svg>
@@ -648,6 +697,10 @@ footer{
       </div>
       <div class="rv">
         <div style="font-family:'Outfit',sans-serif;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--purple);margin-bottom:14px">Brand in Action</div>
+        <div class="bia-card"><div class="bia-head">Σε περίπτωση παραπόνου</div><div class="bia-body"><div class="bia-tag">Ψύχραιμη, προσανατολισμένη στη λύση.</div><div class="bia-quote">«Κατανοούμε τη δυσκολία που προέκυψε. Είμαστε ήδη πάνω από το πρόβλημα για να διασφαλίσουμε ότι το αποτέλεσμα θα είναι αυτό που αξίζει το brand σας.»</div></div></div>
+        <div class="bia-card"><div class="bia-head">Σε παρουσίαση νέου προϊόντος</div><div class="bia-body"><div class="bia-tag">Ενθουσιώδης αλλά τεχνοκρατική.</div><div class="bia-quote">«Η νέα σειρά X συνδυάζει 30% μεγαλύτερη αντοχή με 100% ανακυκλώσιμα υλικά — η εικόνα ποιότητας που αξίζει το brand σας.»</div></div></div>
+        <div class="bia-card"><div class="bia-head">Στα Social Media</div><div class="bia-body"><div class="bia-tag">Expert του κλάδου που μοιράζεται insights.</div><div class="bia-quote">«Xenos Packaging. Συσκευασίες που διαφημίζουν το brand σας... κάθε μέρα.»</div></div></div>
+      <div style="font-family:'Outfit',sans-serif;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--purple);margin-bottom:14px">Brand in Action</div>
         <div class="bia-card"><div class="bia-head">Σε περίπτωση παραπόνου</div><div class="bia-body"><div class="bia-tag">Ψύχραιμη, προσανατολισμένη στη λύση.</div><div class="bia-quote">«Κατανοούμε τη δυσκολία που προέκυψε. Είμαστε ήδη πάνω από το πρόβλημα για να διασφαλίσουμε ότι το αποτέλεσμα θα είναι αυτό που αξίζει το brand σας.»</div></div></div>
         <div class="bia-card"><div class="bia-head">Σε παρουσίαση νέου προϊόντος</div><div class="bia-body"><div class="bia-tag">Ενθουσιώδης αλλά τεχνοκρατική.</div><div class="bia-quote">«Η νέα σειρά X συνδυάζει 30% μεγαλύτερη αντοχή με 100% ανακυκλώσιμα υλικά — η εικόνα ποιότητας που αξίζει το brand σας.»</div></div></div>
         <div class="bia-card"><div class="bia-head">Στα Social Media</div><div class="bia-body"><div class="bia-tag">Expert του κλάδου — επαγγελματικές αλλά προσιτές αναρτήσεις. Δεν δείχνουμε «κρύα» μηχανήματα. Δείχνουμε το αποτέλεσμα.</div><div class="bia-quote">«Xenos Packaging. Συσκευασίες που διαφημίζουν το brand σας... κάθε μέρα.»</div></div></div>
@@ -749,20 +802,86 @@ footer{
   <div class="s-inner">
     <div class="s-eyebrow rv">11 — Color Palette</div>
     <h2 class="s-title rv">Χρωματική Παλέτα</h2>
-    <p class="s-lead rv">Η χρωματική ταυτότητα εκφράζει ζωντάνια, σύγχρονη ενέργεια και επαγγελματική θέση. Το gradient είναι η «υπογραφή» του brand.</p>
+    <p class="s-lead rv">Η παλέτα εκφράζει την πληρότητα του brand: ζωντάνια, ζεστασιά, εμπιστοσύνη και φυσικότητα. Τέσσερις οικογένειες χρωμάτων — καθεμιά με 8 διαβαθμίσεις — καλύπτουν όλες τις ανάγκες επικοινωνίας. Το gradient Magenta → Purple → Blue παραμένει η «υπογραφή» του brand.</p>
+
     <div class="rv">
       <div class="grad-bar"><span>Brand Gradient — The Signature</span></div>
-      <div class="grad-meta"><div><div class="grad-name">Magenta → Purple → Cyan</div><div class="grad-code">linear-gradient(135deg, #E5179E → #9B4DBE → #29ABE2)</div></div><div style="font-size:11px;color:var(--muted)">Primary Brand Expression</div></div>
+      <div class="grad-meta"><div><div class="grad-name">Magenta → Purple → Blue</div><div class="grad-code">linear-gradient(135deg, #C93978 → #7A27A3 → #2087E5)</div></div><div style="font-size:11px;color:var(--muted)">Primary Brand Expression</div></div>
     </div>
+
+    <div style="font-family:'Outfit',sans-serif;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--purple);margin-bottom:14px">Core Brand Colors</div>
     <div class="swatches rv">
-      <div class="sw"><div class="sw-block" style="background:#E5179E"></div><div class="sw-info"><div class="sw-name">Magenta Pink</div><div class="sw-hex">#E5179E</div><div class="sw-role">Primary — Energy</div></div></div>
-      <div class="sw"><div class="sw-block" style="background:#29ABE2"></div><div class="sw-info"><div class="sw-name">Cyan Blue</div><div class="sw-hex">#29ABE2</div><div class="sw-role">Primary — Trust</div></div></div>
-      <div class="sw"><div class="sw-block" style="background:#7B3FA0"></div><div class="sw-info"><div class="sw-name">Deep Purple</div><div class="sw-hex">#7B3FA0</div><div class="sw-role">Secondary — Authority</div></div></div>
-      <div class="sw"><div class="sw-block" style="background:#4DB8E8"></div><div class="sw-info"><div class="sw-name">Sky Blue</div><div class="sw-hex">#4DB8E8</div><div class="sw-role">Secondary — Openness</div></div></div>
-      <div class="sw"><div class="sw-block" style="background:#8B6BAE"></div><div class="sw-info"><div class="sw-name">Lavender</div><div class="sw-hex">#8B6BAE</div><div class="sw-role">Accent — Warmth</div></div></div>
-      <div class="sw"><div class="sw-block" style="background:#0D0D22"></div><div class="sw-info"><div class="sw-name">Deep Navy</div><div class="sw-hex">#0D0D22</div><div class="sw-role">Text — Depth</div></div></div>
+      <div class="sw"><div class="sw-block" style="background:#C93978"></div><div class="sw-info"><div class="sw-name">Brand Magenta</div><div class="sw-hex">#C93978</div><div class="sw-role">Primary — Energy</div></div></div>
+      <div class="sw"><div class="sw-block" style="background:#7A27A3"></div><div class="sw-info"><div class="sw-name">Deep Purple</div><div class="sw-hex">#7A27A3</div><div class="sw-role">Primary — Authority</div></div></div>
+      <div class="sw"><div class="sw-block" style="background:#2087E5"></div><div class="sw-info"><div class="sw-name">Brand Blue</div><div class="sw-hex">#2087E5</div><div class="sw-role">Primary — Trust</div></div></div>
+      <div class="sw"><div class="sw-block" style="background:#070A33"></div><div class="sw-info"><div class="sw-name">Signature Navy</div><div class="sw-hex">#070A33</div><div class="sw-role">Text — Depth</div></div></div>
+      <div class="sw"><div class="sw-block" style="background:#AE5BD7"></div><div class="sw-info"><div class="sw-name">Lavender</div><div class="sw-hex">#AE5BD7</div><div class="sw-role">Accent — Warmth</div></div></div>
+      <div class="sw"><div class="sw-block" style="background:#D09258"></div><div class="sw-info"><div class="sw-name">Warm Amber</div><div class="sw-hex">#D09258</div><div class="sw-role">Accent — Human</div></div></div>
+      <div class="sw"><div class="sw-block" style="background:#40A281"></div><div class="sw-info"><div class="sw-name">Sage Green</div><div class="sw-hex">#40A281</div><div class="sw-role">Accent — Nature</div></div></div>
       <div class="sw"><div class="sw-block" style="background:#F5F5FA;border:1px solid #E0E0EC"></div><div class="sw-info"><div class="sw-name">Off White</div><div class="sw-hex">#F5F5FA</div><div class="sw-role">Background — Space</div></div></div>
-      <div class="sw"><div class="sw-block" style="background:#fff;border:1px solid #E0E0EC"></div><div class="sw-info"><div class="sw-name">White</div><div class="sw-hex">#FFFFFF</div><div class="sw-role">Background — Pure</div></div></div>
+    </div>
+
+    <div style="font-family:'Outfit',sans-serif;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--purple);margin:48px 0 14px">Extended Palette — Four Families × Eight Tints</div>
+    <div class="palette-families rv">
+      <div class="pfam">
+        <div class="pfam-head"><div class="pfam-name">Magenta Family</div><div class="pfam-role">Energy · Brand Identity</div></div>
+        <div class="pfam-stack">
+          <div class="pfam-chip light" style="background:#EF8093"><span>#EF8093</span><span class="tint">01</span></div>
+          <div class="pfam-chip light" style="background:#E94B67"><span>#E94B67</span><span class="tint">02</span></div>
+          <div class="pfam-chip" style="background:#C93978"><span>#C93978</span><span class="tint">03</span></div>
+          <div class="pfam-chip" style="background:#A12B5F"><span>#A12B5F</span><span class="tint">04</span></div>
+          <div class="pfam-chip" style="background:#AE5BD7"><span>#AE5BD7</span><span class="tint">05</span></div>
+          <div class="pfam-chip" style="background:#7A27A3"><span>#7A27A3</span><span class="tint">06</span></div>
+          <div class="pfam-chip" style="background:#42235F"><span>#42235F</span><span class="tint">07</span></div>
+          <div class="pfam-chip" style="background:#201541"><span>#201541</span><span class="tint">08</span></div>
+        </div>
+      </div>
+      <div class="pfam">
+        <div class="pfam-head"><div class="pfam-name">Warm Family</div><div class="pfam-role">Human · Craft · Heritage</div></div>
+        <div class="pfam-stack">
+          <div class="pfam-chip light" style="background:#F7DCC4"><span>#F7DCC4</span><span class="tint">01</span></div>
+          <div class="pfam-chip light" style="background:#E7B283"><span>#E7B283</span><span class="tint">02</span></div>
+          <div class="pfam-chip light" style="background:#D09258"><span>#D09258</span><span class="tint">03</span></div>
+          <div class="pfam-chip light" style="background:#CF9258"><span>#CF9258</span><span class="tint">04</span></div>
+          <div class="pfam-chip" style="background:#B68252"><span>#B68252</span><span class="tint">05</span></div>
+          <div class="pfam-chip" style="background:#A96323"><span>#A96323</span><span class="tint">06</span></div>
+          <div class="pfam-chip" style="background:#793003"><span>#793003</span><span class="tint">07</span></div>
+          <div class="pfam-chip" style="background:#63360D"><span>#63360D</span><span class="tint">08</span></div>
+        </div>
+      </div>
+      <div class="pfam">
+        <div class="pfam-head"><div class="pfam-name">Blue Family</div><div class="pfam-role">Trust · Reliability · Rigour</div></div>
+        <div class="pfam-stack">
+          <div class="pfam-chip light" style="background:#CFE2F0"><span>#CFE2F0</span><span class="tint">01</span></div>
+          <div class="pfam-chip light" style="background:#BBDDFC"><span>#BBDDFC</span><span class="tint">02</span></div>
+          <div class="pfam-chip light" style="background:#64B5F5"><span>#64B5F5</span><span class="tint">03</span></div>
+          <div class="pfam-chip" style="background:#2087E5"><span>#2087E5</span><span class="tint">04</span></div>
+          <div class="pfam-chip" style="background:#0E47A1"><span>#0E47A1</span><span class="tint">05</span></div>
+          <div class="pfam-chip" style="background:#111990"><span>#111990</span><span class="tint">06</span></div>
+          <div class="pfam-chip" style="background:#022B6C"><span>#022B6C</span><span class="tint">07</span></div>
+          <div class="pfam-chip" style="background:#070A33"><span>#070A33</span><span class="tint">08</span></div>
+        </div>
+      </div>
+      <div class="pfam">
+        <div class="pfam-head"><div class="pfam-name">Green Family</div><div class="pfam-role">Nature · Sustainability · ISO</div></div>
+        <div class="pfam-stack">
+          <div class="pfam-chip light" style="background:#C8EECD"><span>#C8EECD</span><span class="tint">01</span></div>
+          <div class="pfam-chip light" style="background:#92E5A8"><span>#92E5A8</span><span class="tint">02</span></div>
+          <div class="pfam-chip light" style="background:#6ABF7E"><span>#6ABF7E</span><span class="tint">03</span></div>
+          <div class="pfam-chip light" style="background:#5BDF7B"><span>#5BDF7B</span><span class="tint">04</span></div>
+          <div class="pfam-chip" style="background:#74C69E"><span>#74C69E</span><span class="tint">05</span></div>
+          <div class="pfam-chip" style="background:#40A281"><span>#40A281</span><span class="tint">06</span></div>
+          <div class="pfam-chip" style="background:#266851"><span>#266851</span><span class="tint">07</span></div>
+          <div class="pfam-chip" style="background:#0A3A2A"><span>#0A3A2A</span><span class="tint">08</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="font-family:'Outfit',sans-serif;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--purple);margin-bottom:14px">How the Families Work Together</div>
+    <div class="usage-grid rv">
+      <div class="usage-card"><div class="uc-label">Magenta + Purple + Blue</div><div class="uc-title">Signature Gradient</div><div class="uc-text">Το κύριο brand expression. Χρησιμοποιείται σε hero sections, CTAs, key visuals — όπου χρειάζεται ενέργεια και αναγνωρισιμότητα.</div></div>
+      <div class="usage-card"><div class="uc-label">Warm Family</div><div class="uc-title">Ανθρώπινο στοιχείο</div><div class="uc-text">Για να αναδειχθεί η ανθρώπινη φροντίδα, η οικογενειακή ιστορία και τα 35 χρόνια δουλειάς. Ιδανικά σε storytelling και συνεντεύξεις προσωπικού.</div></div>
+      <div class="usage-card"><div class="uc-label">Blue + Green Families</div><div class="uc-title">Ποιότητα & Υπευθυνότητα</div><div class="uc-text">Πιστοποιήσεις ISO, περιβαλλοντικά θέματα, τεχνικά specs, data. Εκφράζουν τη σοβαρότητα και το «οργανωμένο» της εταιρείας.</div></div>
     </div>
   </div>
 </section>
@@ -810,26 +929,26 @@ footer{
   <div class="s-inner">
     <div class="s-eyebrow rv">13 — Visual Style</div>
     <h2 class="s-title rv">Οπτικό Ύφος</h2>
-    <p class="s-lead rv">Πρωτότυπες φωτογραφίες με ενιαίο ύφος που αναδεικνύει το προϊόν, τον άνθρωπο και τη λεπτομέρεια.</p>
+    <p class="s-lead rv">Λιτό οπτικό ύφος, χωρίς εκτεταμένη χρήση φωτογραφιών. Το site λειτουργεί ως <strong>αναλυτικός οδηγός πώλησης</strong>: εύκολος, διαφανής, με έμφαση στη λεπτομέρεια και την ποιότητα — όχι στον εντυπωσιασμό.</p>
     <div class="do-dont rv">
-      <div class="do-box"><span class="dd-badge">✓ Do</span><ul class="dd-list"><li>Πραγματικές φωτογραφίες προϊόντων πελατών</li><li>Έμφαση στη λεπτομέρεια, στα χέρια, στο αποτέλεσμα</li><li>Καθαρό φως, ουδέτερα backgrounds, μίνιμαλ περιβάλλον</li><li>Ανθρώπινο στοιχείο σε κάθε εικόνα</li><li>Κοντινά που δείχνουν ποιότητα και φροντίδα</li><li>Testimonials — οι πελάτες μιλάνε για εμάς</li></ul></div>
+      <div class="do-box"><span class="dd-badge">✓ Do</span><ul class="dd-list"><li>Επιλεκτική χρήση εικόνας — μόνο όταν προσθέτει αξία</li><li>Έμφαση στη λεπτομέρεια, στα χέρια, στην τελική συσκευασία</li><li>Καθαρό φως, ουδέτερα backgrounds, μίνιμαλ περιβάλλον</li><li>Επώνυμα πρόσωπα συναδέλφων — προαιρετικά, με διακριτικότητα</li><li>Testimonials &amp; κριτικές 5★ — οι πελάτες μιλάνε για εμάς</li><li>Data &amp; πιστοποιήσεις (ISO, GPTW) ως visual elements</li></ul></div>
       <div class="dont-box"><span class="dd-badge">✗ Don't</span><ul class="dd-list"><li>Stock images — αποφύγετε γενικές φωτογραφίες</li><li>Έμφαση στα μηχανήματα ως πρωτεύον στοιχείο</li><li>Ανώνυμες, αδιάφορες παρουσιάσεις προϊόντων</li><li>Φορτωμένα ή χαοτικά backgrounds</li><li>Υπερβολική επεξεργασία εικόνων</li></ul></div>
     </div>
     <div class="rv">
       <div style="font-family:'Outfit',sans-serif;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--purple);margin-bottom:18px">Τι θέλουμε να νιώθει ο πελάτης</div>
       <div class="feel-grid">
-        <div class="feel-card"><div class="feel-word">Σιγουριά</div><div class="feel-en">Confidence</div></div>
+        <div class="feel-card"><div class="feel-word">Φερεγγυότητα</div><div class="feel-en">Solidity</div></div>
         <div class="feel-card"><div class="feel-word">Εμπιστοσύνη</div><div class="feel-en">Trust</div></div>
-        <div class="feel-card"><div class="feel-word">Επαγγελματισμός</div><div class="feel-en">Professionalism</div></div>
-        <div class="feel-card"><div class="feel-word">Σταθερός Συνεργάτης</div><div class="feel-en">Reliable Partner</div></div>
-        <div class="feel-card"><div class="feel-word">Εγγύηση</div><div class="feel-en">Guarantee</div></div>
+        <div class="feel-card"><div class="feel-word">Ανθρώπινο Πρόσωπο</div><div class="feel-en">Human Care</div></div>
+        <div class="feel-card"><div class="feel-word">Συνέπεια</div><div class="feel-en">Consistency</div></div>
+        <div class="feel-card"><div class="feel-word">Ουσία</div><div class="feel-en">Substance</div></div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- 14 DESIGN PRINCIPLES -->
 
-<!-- 14 CLIENT BRANDS -->
 <section class="s-white" id="clients">
   <div class="wm">14</div>
   <div class="s-inner">
@@ -901,23 +1020,189 @@ footer{
   </div>
 </section>
 
-<!-- 15 DESIGN PRINCIPLES -->
+
+<section class="s-light" id="corporate">
+  <div class="wm">15</div>
+  <div class="s-inner rv">
+    <div class="s-eyebrow">Εταιρικό Προφίλ</div>
+    <div class="s-title">Η Εταιρεία από Μέσα</div>
+    <div class="s-lead">Αλήθειες, αρχές και πλεονεκτήματα που δεν φαίνονται στον τιμοκατάλογο — αλλά καθορίζουν κάθε συνεργασία.</div>
+
+    <!-- Founding story -->
+    <div class="vision-quote rv" style="margin-bottom:52px">
+      Η Xenos Packaging ξεκίνησε το <strong>1991 από μηδέν</strong>, με ένα μόνο όραμα: ό,τι πωλείται έχει ανάγκη να συσκευαστεί. Τίποτα, όσο καλό και αν είναι, δεν μπορεί να δοθεί «σκέτο». Ο συσκευαστής είναι πάντα απαραίτητος. Αυτή η απλή αλήθεια έγινε η θεμέλια λίθος μίας εταιρείας 35 χρόνων.
+    </div>
+
+    <!-- Pricing philosophy callout -->
+    <div class="price-insight rv">
+      <div class="price-insight-bg"></div>
+      <div class="price-insight-body">
+        <div class="price-insight-title">Φιλοσοφία Τιμολόγησης</div>
+        <div class="price-insight-headline">
+          Το κόστος μίας τσάντας είναι <strong>0,08€ έως 0,90€</strong>.<br>
+          Το ρούχο που μπαίνει μέσα κοστίζει 50€. Η τσάντα δεν είναι έξοδο — είναι <strong>η τελευταία εντύπωση</strong> που αφήνει το brand σας.
+        </div>
+        <div class="price-example">
+          <div class="px-item">
+            <div class="px-num" style="color:#fff">50€</div>
+            <div class="px-label">αξία προϊόντος</div>
+          </div>
+          <div class="px-arrow">→</div>
+          <div class="px-item">
+            <div class="px-num accent">0,08€</div>
+            <div class="px-label">κόστος τσάντας</div>
+          </div>
+          <div class="px-arrow">→</div>
+          <div class="px-item">
+            <div class="px-num accent">0,16%</div>
+            <div class="px-label">της αξίας</div>
+          </div>
+          <div style="font-size:12px;color:rgba(255,255,255,.4);font-style:italic;max-width:280px;line-height:1.6;margin-left:8px">
+            Ωστόσο, οι περισσότεροι εστιάζουν στο σύνολο (π.χ. 400€ για 5.000 τσάντες) και χάνουν τη μεγάλη εικόνα.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trade-off framework -->
+    <div style="font-family:'Outfit',sans-serif;font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--pink);margin-bottom:16px" class="rv">Το Trade-Off της Αγοράς</div>
+    <div class="tradeof-grid rv" style="margin-bottom:52px">
+      <div class="tradeof-cell">
+        <div class="tradeof-eq">Καλό &amp; Γρήγορο</div>
+        <div class="tradeof-result high">= Ακριβό</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:10px;line-height:1.6">Υψηλή ποιότητα με γρήγορη παράδοση — το premium επίπεδο της αγοράς.</div>
+      </div>
+      <div class="tradeof-cell">
+        <div class="tradeof-eq">Καλό &amp; Φθηνό</div>
+        <div class="tradeof-result slow">= Αργό</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:10px;line-height:1.6">Δεν υπάρχουν συντομεύσεις στην ποιότητα — χρειάζεται χρόνος.</div>
+      </div>
+      <div class="tradeof-cell">
+        <div class="tradeof-eq">Γρήγορο &amp; Φθηνό</div>
+        <div class="tradeof-result low">= Χαμηλής Ποιότητας</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:10px;line-height:1.6">Ο χώρος των ανοργάνωτων μικρών ανταγωνιστών που πληγώνουν την αγορά.</div>
+      </div>
+    </div>
+
+    <!-- Certifications & Awards -->
+    <div style="font-family:'Outfit',sans-serif;font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--pink);margin-bottom:16px" class="rv">Πιστοποιήσεις &amp; Βραβεύσεις</div>
+    <div class="awards-grid rv">
+      <div class="award-item">
+        <div class="award-num"><span>2×</span></div>
+        <div class="award-label">Great Place to Work<br>πιστοποίηση</div>
+      </div>
+      <div class="award-item">
+        <div class="award-num"><span>Top 10</span></div>
+        <div class="award-label">καλύτερες εταιρείες<br>Ελλάδας 2025</div>
+      </div>
+      <div class="award-item">
+        <div class="award-num"><span>Top 6</span></div>
+        <div class="award-label">θέση γυναίκας<br>στην ελληνική επιχείρηση</div>
+      </div>
+      <div class="award-item">
+        <div class="award-num"><span>560+</span></div>
+        <div class="award-label">κριτικές 5 αστέρων<br>— μοναδικό στον κλάδο</div>
+      </div>
+      <div class="award-item">
+        <div class="award-num"><span>ISO</span></div>
+        <div class="award-label">πολλαπλές πιστοποιήσεις<br>προϊόν, περιβάλλον, διαδικασίες</div>
+      </div>
+      <div class="award-item">
+        <div class="award-num"><span>35+</span></div>
+        <div class="award-label">χρόνια συνεχούς<br>παρουσίας στην αγορά</div>
+      </div>
+    </div>
+
+    <!-- Operational differentiators grid -->
+    <div style="font-family:'Outfit',sans-serif;font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--pink);margin-bottom:16px" class="rv">Λειτουργικά Πλεονεκτήματα</div>
+    <div class="corp-grid rv">
+      <div class="corp-card">
+        <div class="corp-card-icon">🏭</div>
+        <div class="corp-card-title">Πρώτες Ύλες &amp; Απόθεμα</div>
+        <div class="corp-card-text">Εισαγόμενες πρώτες ύλες από <strong>σταθερούς, πιστοποιημένους προμηθευτές</strong> με μακροχρόνιες σχέσεις. Διατηρούμε απόθεμα τουλάχιστον <strong>ενός έτους</strong>. Πάντα επιλέγουμε το ποιοτικότερο — όχι το φθηνότερο.</div>
+      </div>
+      <div class="corp-card">
+        <div class="corp-card-icon">⚖️</div>
+        <div class="corp-card-title">Νομική &amp; Οικονομική Ασφάλεια</div>
+        <div class="corp-card-text">Πλήρης νομική κάλυψη <strong>~40 εργαζομένων</strong> — μηδέν παράνομη εργασία (σπάνιο στον κλάδο). Διαθέτουμε <strong>ενημερότητες φορολογικής-ασφαλιστικής</strong> και ελεγμένους ισολογισμούς για μεγάλες επιχειρήσεις και Δημόσιο.</div>
+      </div>
+      <div class="corp-card">
+        <div class="corp-card-icon">♻️</div>
+        <div class="corp-card-title">Περιβαλλοντική Συμμόρφωση</div>
+        <div class="corp-card-text">Τηρούμε <strong>απαρέγκλιτα</strong> κάθε υποχρέωση ανακύκλωσης και περιβαλλοντικής διαχείρισης. Κανένας ανταγωνιστής δεν το τηρεί σε οριζόντιο επίπεδο — εμείς το κάνουμε καθημερινή πρακτική.</div>
+      </div>
+      <div class="corp-card">
+        <div class="corp-card-icon">📦</div>
+        <div class="corp-card-title">Άμεσες Πωλήσεις</div>
+        <div class="corp-card-text">Δεν βασιζόμαστε σε μεταπωλητές. <strong>Απευθείας σχέση</strong> παραγωγού–πελάτη. Μικρά καταστήματα ή μεγάλες βιομηχανίες — το ίδιο επίπεδο φροντίδας για όλους.</div>
+      </div>
+      <div class="corp-card">
+        <div class="corp-card-icon">🔄</div>
+        <div class="corp-card-title">Ανταγωνιστικό Τοπίο</div>
+        <div class="corp-card-text">Μικροί ανταγωνιστές «εμφανίζονται και εξαφανίζονται» αφήνοντας πίσω υποβαθμισμένη αντίληψη για τη συσκευασία. <strong>Η σταθερή παρουσία 35 χρόνων</strong> είναι η καλύτερη απάντηση στον ανταγωνισμό.</div>
+      </div>
+      <div class="corp-card">
+        <div class="corp-card-icon">👨‍👩‍👧‍👦</div>
+        <div class="corp-card-title">Οικογενειακή Επιχείρηση — 5 Συνεχιστές</div>
+        <div class="corp-card-text">Πέντε συνεχιστές, ο καθένας σε διαφορετικό τομέα. Έλαβαν τη θέση τους <strong>με προσόντα και κόπο</strong> — όχι με το επίθετο. Κοινή παιδεία, κοινές αξίες, κοινή φιλοσοφία.</div>
+      </div>
+    </div>
+
+    <!-- Customer service process -->
+    <div style="font-family:'Outfit',sans-serif;font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--pink);margin-bottom:16px" class="rv">Διαδικασία Εξυπηρέτησης Πελάτη</div>
+    <div class="service-steps rv">
+      <div class="svc-step">
+        <div class="svc-step-num">Βήμα 01</div>
+        <div class="svc-step-body">
+          <div class="svc-step-title">Παραγωγή — Επώνυμη Ενημέρωση</div>
+          <div class="svc-step-text">Σε κάθε στάδιο αποστέλλεται email με <strong>επώνυμη επικοινωνία</strong> από τον υπεύθυνο εργαζόμενο.</div>
+          <div class="svc-step-quote">«Η παραγγελία σας βρίσκεται σε παραγωγή — είμαι ο Χάρης και σας ενημερώνω.»</div>
+        </div>
+      </div>
+      <div class="svc-step">
+        <div class="svc-step-num">Βήμα 02</div>
+        <div class="svc-step-body">
+          <div class="svc-step-title">Ποιοτικός Έλεγχος</div>
+          <div class="svc-step-text">Ο πελάτης ενημερώνεται και για τον ποιοτικό έλεγχο — με όνομα και υπευθυνότητα.</div>
+          <div class="svc-step-quote">«Η παραγγελία σας ελέγχεται από το ποιοτικό τμήμα — είμαι ο Δανιήλ.»</div>
+        </div>
+      </div>
+      <div class="svc-step">
+        <div class="svc-step-num">Βήμα 03</div>
+        <div class="svc-step-body">
+          <div class="svc-step-title">Έτοιμο για Αποστολή + Φωτογραφίες</div>
+          <div class="svc-step-text">Πριν αποχωρήσει η παραγγελία, αποστέλλονται <strong>φωτογραφίες της συσκευασίας</strong> — αποκλείεται κάθε αμφισβήτηση μετά την παράδοση.</div>
+          <div class="svc-step-quote">«Η παραγγελία σας είναι έτοιμη για αποστολή — είμαι ο Γιώργος.»</div>
+        </div>
+      </div>
+      <div class="svc-step">
+        <div class="svc-step-num">Βήμα 04</div>
+        <div class="svc-step-body">
+          <div class="svc-step-title">Διαχείριση Παραπόνων — Εντός 24 Ωρών</div>
+          <div class="svc-step-text">Σύστημα άμεσης ανταπόκρισης εντός 24 ωρών. Ενιαία αντιμετώπιση ανεξάρτητα από τον χαρακτήρα του εκάστοτε εργαζομένου. Αν το λάθος είναι δικό μας, <strong>αποκαθίσταται αμέσως</strong>.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <section id="principles">
   <div class="pr-hero">
     <div class="pr-noise"></div>
     <div class="pr-inner">
-      <div class="pr-eye rv">15 — The Big Idea</div>
-      <div class="manifesto rv"><span class="strike">δεν πρόκειται για τον φθηνότερο προμηθευτή</span><br>αλλά για<br><span class="hl">τον καλύτερο συνεργάτη!</span></div>
-      <p class="manifesto-sub rv">Κάθε σημείο επαφής του brand πρέπει να αντανακλά αυτή την υπόσχεση: <strong style="color:#fff">αξιοπιστία, ουσία και ανθρώπινο πρόσωπο</strong>.</p>
+      <div class="pr-eye rv">14 — The Big Idea</div>
+      <div class="manifesto rv"><span class="strike">δεν είμαστε ο φθηνότερος προμηθευτής</span><br>είμαστε<br><span class="hl">η οικογένεια που στηρίζει το brand σας.</span></div>
+      <p class="manifesto-sub rv">35 χρόνια. 2 γενιές. 40 συνάδελφοι. 560+ κριτικές 5 αστέρων. Κάθε σημείο επαφής με το brand μας πρέπει να αντανακλά την ίδια αλήθεια: <strong style="color:#fff">ήθος, συνέπεια και άνθρωπο στο κέντρο</strong>.</p>
     </div>
   </div>
   <div class="pr-grid rv">
-    <div class="pr-card"><div class="pr-word">Minimal</div><div class="pr-desc">Καθαρό, απέριττο design που προβάλλει το προϊόν ως πρωταγωνιστή.</div></div>
-    <div class="pr-card"><div class="pr-word">Ανθρώπινο</div><div class="pr-desc">Φιλικό, ζεστό, άμεσο — το ανθρώπινο στοιχείο κυριαρχεί πάντα.</div></div>
-    <div class="pr-card"><div class="pr-word">Αποτελεσματικό</div><div class="pr-desc">To the point — η επικοινωνία οδηγεί σε λύσεις, όχι αόριστες υποσχέσεις.</div></div>
-    <div class="pr-card"><div class="pr-word">Καθαρό</div><div class="pr-desc">Απέριττη αισθητική — κάθε στοιχείο έχει λόγο ύπαρξης.</div></div>
-    <div class="pr-card"><div class="pr-word">Ζεστό</div><div class="pr-desc">Επαγγελματικό αλλά προσιτό — χρώματα και γραμματοσειρές που νιώθεις οικεία.</div></div>
-    <div class="pr-card"><div class="pr-word">Συνεπές</div><div class="pr-desc">Ενιαίο ύφος σε όλα τα κανάλια — ο πελάτης αναγνωρίζει το brand παντού.</div></div>
+    <div class="pr-card"><div class="pr-word">Διαφανές</div><div class="pr-desc">Χρόνοι, τιμές, διαδικασίες — όλα ξεκάθαρα από την αρχή. Χωρίς «ψιλά γράμματα», χωρίς παγίδες.</div></div>
+    <div class="pr-card"><div class="pr-word">Ανθρώπινο</div><div class="pr-desc">Επώνυμοι άνθρωποι επικοινωνούν μαζί σας. Όχι bots, όχι τυποποιημένες απαντήσεις — πραγματικοί συνάδελφοι.</div></div>
+    <div class="pr-card"><div class="pr-word">Ουσιαστικό</div><div class="pr-desc">Site ως αναλυτικός οδηγός πώλησης. Έμφαση στη λεπτομέρεια και την ποιότητα, όχι σε φωτογραφίες για εντυπωσιασμό.</div></div>
+    <div class="pr-card"><div class="pr-word">Συνεπές</div><div class="pr-desc">Ενιαίος τόνος από τον αποθηκάριο μέχρι τον διευθυντή. Η ταυτότητα δεν εξαρτάται από τον χαρακτήρα του κάθε συναδέλφου.</div></div>
+    <div class="pr-card"><div class="pr-word">Υπεύθυνο</div><div class="pr-desc">ISO, ανακυκλώσεις, νόμιμη εργασία, ενημερότητες — δεν είναι marketing, είναι καθημερινή πρακτική.</div></div>
+    <div class="pr-card"><div class="pr-word">Οικογενειακό</div><div class="pr-desc">Πέντε συνεχιστές που δεν χρησιμοποίησαν το επίθετό τους — πήραν τη θέση τους με προσόντα και κόπο.</div></div>
   </div>
 </section>
 
@@ -929,7 +1214,7 @@ footer{
 </main>
 
 <script>
-const sIds = ['hero','vision','mission','audience','usp','framework','values','personality','voice','logo','colors','typography','visual','clients','principles'];
+const sIds = ['hero','vision','mission','audience','usp','framework','values','personality','voice','logo','colors','typography','visual','principles'];
 
 // Hamburger
 const hamburger = document.getElementById('hamburger');
