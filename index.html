@@ -10,29 +10,32 @@
 <style>
 /* ── TOKENS ── */
 :root {
-  /* Primary brand colors */
-  --pink:    #C93978;   /* Primary — Magenta */
-  --magenta: #A12B5F;   /* Deep magenta */
-  --purple:  #7A27A3;   /* Deep purple */
-  --lav:     #AE5BD7;   /* Lavender */
-  --cyan:    #2087E5;   /* Primary — Blue */
-  --sky:     #64B5F5;   /* Sky blue */
-  --deepblue:#0E47A1;   /* Deep blue */
-  --indigo:  #111990;   /* Indigo */
+  /* Xenos brand colors */
+  --red:     #AE2B20;   /* Xenos Red */
+  --grey:    #4F4F51;   /* Xenos Grey */
+  /* Aliases used throughout the stylesheet */
+  --pink:    #AE2B20;
+  --magenta: #8B2219;
+  --purple:  #4F4F51;
+  --lav:     #4F4F51;
+  --cyan:    #4F4F51;
+  --sky:     #707073;
+  --deepblue:#2B2B2D;
+  --indigo:  #1A1A1C;
   --amber:   #D09258;   /* Warm accent */
   --terra:   #A96323;   /* Earthy terracotta */
   --sage:    #40A281;   /* Sage green */
   --fern:    #266851;   /* Deep green */
   /* Neutrals */
-  --navy:    #070A33;   /* Darkest — signature */
-  --dark:    #201541;   /* Deep ink */
-  --mid:     #4A4A6A;
-  --muted:   #8888AA;
-  --light:   #F5F5FA;
+  --navy:    #000000;
+  --dark:    #000000;
+  --mid:     #4F4F51;
+  --muted:   #888888;
+  --light:   #F5F5F5;
   --white:   #FFFFFF;
-  /* Signature gradient */
-  --grad:    linear-gradient(135deg,#C93978 0%,#7A27A3 50%,#2087E5 100%);
-  --grad-h:  linear-gradient(90deg,#C93978 0%,#7A27A3 50%,#2087E5 100%);
+  /* Brand gradient */
+  --grad:    linear-gradient(135deg, #AE2B20 0%, #4F4F51 100%);
+  --grad-h:  linear-gradient(90deg, #AE2B20 0%, #4F4F51 100%);
   --ease:    cubic-bezier(.22,.68,0,1.2);
   --sb:      260px;
 }
@@ -86,7 +89,7 @@ body{font-family:'Noto Sans',sans-serif;background:var(--white);color:var(--dark
   transition:color .2s,border-color .2s,background .2s;
 }
 .sb-link:hover{color:rgba(255,255,255,.82);background:rgba(255,255,255,.04)}
-.sb-link.active{color:#fff;border-left-color:var(--pink);background:rgba(201,57,120,.08)}
+.sb-link.active{color:#fff;border-left-color:var(--pink);background:rgba(174,43,32,.08)}
 .sb-num{font-size:9px;opacity:.35;min-width:20px;font-family:'Outfit',sans-serif}
 .sb-foot{
   padding:20px 28px;
@@ -125,9 +128,9 @@ body{font-family:'Noto Sans',sans-serif;background:var(--white);color:var(--dark
 .hero-mesh{
   position:absolute;inset:0;
   background:
-    radial-gradient(ellipse 80% 60% at 20% 40%, rgba(201,57,120,.38) 0%, transparent 60%),
-    radial-gradient(ellipse 70% 50% at 80% 30%, rgba(32,135,229,.28) 0%, transparent 55%),
-    radial-gradient(ellipse 50% 40% at 55% 80%, rgba(122,39,163,.32) 0%, transparent 50%);
+    radial-gradient(ellipse 80% 60% at 20% 40%, rgba(174,43,32,.38) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 80% 30%, rgba(79,79,81,.28) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 55% 80%, rgba(174,43,32,.22) 0%, transparent 50%);
 }
 .hero-grid{
   position:absolute;inset:0;
@@ -181,7 +184,7 @@ section{position:relative;overflow:hidden}
 .s-dark .wm{opacity:.07;color:#fff}
 .s-inner{padding:88px 80px;max-width:1100px}
 .s-eyebrow{font-family:'Outfit',sans-serif;font-size:10px;font-weight:700;letter-spacing:.35em;text-transform:uppercase;color:var(--pink);margin-bottom:14px}
-.s-dark .s-eyebrow{color:rgba(229,23,158,.75)}
+.s-dark .s-eyebrow{color:rgba(174,43,32,.85)}
 .s-title{font-family:'Outfit',sans-serif;font-size:clamp(34px,4.5vw,62px);font-weight:900;line-height:1.0;letter-spacing:-.02em;color:var(--dark);margin-bottom:22px}
 .s-dark .s-title{color:#fff}
 .s-lead{font-size:16px;line-height:1.8;color:var(--mid);max-width:560px;margin-bottom:52px}
@@ -457,9 +460,9 @@ footer{
 .tradeof-cell{background:#fff;padding:24px 20px;text-align:center}
 .tradeof-eq{font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;color:var(--dark);margin-bottom:8px;line-height:1.5}
 .tradeof-result{font-family:'Outfit',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;display:inline-block;margin-top:4px}
-.tradeof-result.high{color:var(--pink);background:rgba(201,57,120,.08)}
-.tradeof-result.slow{color:var(--purple);background:rgba(122,39,163,.08)}
-.tradeof-result.low{color:var(--cyan);background:rgba(32,135,229,.08)}
+.tradeof-result.high{color:var(--pink);background:rgba(174,43,32,.08)}
+.tradeof-result.slow{color:var(--purple);background:rgba(79,79,81,.08)}
+.tradeof-result.low{color:var(--cyan);background:rgba(79,79,81,.08)}
 
 .service-steps{display:flex;flex-direction:column;gap:12px;margin-bottom:52px}
 .svc-step{display:flex;align-items:flex-start;gap:20px;background:#fff;border:1px solid #E8E8F0;padding:20px 24px}
@@ -470,7 +473,7 @@ footer{
 .svc-step-quote{font-size:12px;color:var(--muted);font-style:italic;margin-top:6px;border-left:2px solid var(--pink);padding-left:10px}
 
 .price-insight{background:var(--navy);padding:36px 40px;margin-bottom:52px;position:relative;overflow:hidden}
-.price-insight-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 80% 50%,rgba(201,57,120,.18) 0%,transparent 60%)}
+.price-insight-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 80% 50%,rgba(174,43,32,.18) 0%,transparent 60%)}
 .price-insight-body{position:relative;z-index:1}
 .price-insight-title{font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:16px}
 .price-insight-headline{font-family:'Outfit',sans-serif;font-size:clamp(18px,2.4vw,28px);font-weight:300;line-height:1.5;color:#fff;max-width:700px;margin-bottom:20px}
@@ -628,21 +631,20 @@ footer{
         <svg viewBox="0 0 480 440" xmlns="http://www.w3.org/2000/svg" style="width:100%">
           <defs>
             <linearGradient id="tg" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#C93978"/>
-              <stop offset="50%" stop-color="#7A27A3"/>
-              <stop offset="100%" stop-color="#2087E5"/>
+              <stop offset="0%" stop-color="#AE2B20"/>
+              <stop offset="100%" stop-color="#4F4F51"/>
             </linearGradient>
           </defs>
           <polygon points="240,30 20,400 460,400" fill="url(#tg)" opacity=".88"/>
           <text x="240" y="250" text-anchor="middle" font-family="Outfit,sans-serif" font-size="12" font-weight="500" fill="rgba(255,255,255,0.65)" letter-spacing="3">XENOS PACKAGING</text>
           <text x="240" y="318" text-anchor="middle" font-family="Outfit,sans-serif" font-size="76" font-weight="900" fill="white">3Α</text>
-          <rect x="152" y="2" width="176" height="64" rx="5" fill="#64B5F5"/>
+          <rect x="152" y="2" width="176" height="64" rx="5" fill="#AE2B20"/>
           <text x="240" y="26" text-anchor="middle" font-family="Outfit,sans-serif" font-size="22" font-weight="900" fill="white">Α<tspan font-size="13" font-weight="400">ΠΟΤΕΛΕΣΜΑ</tspan></text>
           <text x="240" y="50" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11" fill="rgba(255,255,255,0.75)">[προϊόν]</text>
-          <rect x="0" y="380" width="168" height="60" rx="5" fill="#64B5F5"/>
+          <rect x="0" y="380" width="168" height="60" rx="5" fill="#AE2B20"/>
           <text x="84" y="402" text-anchor="middle" font-family="Outfit,sans-serif" font-size="22" font-weight="900" fill="white">Α<tspan font-size="13" font-weight="400">ΞΙΕΣ</tspan></text>
           <text x="84" y="424" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11" fill="rgba(255,255,255,0.75)">[ήθος]</text>
-          <rect x="312" y="380" width="168" height="60" rx="5" fill="#64B5F5"/>
+          <rect x="312" y="380" width="168" height="60" rx="5" fill="#AE2B20"/>
           <text x="396" y="402" text-anchor="middle" font-family="Outfit,sans-serif" font-size="22" font-weight="900" fill="white">Α<tspan font-size="13" font-weight="400">ΝΘΡΩΠΟΙ</tspan></text>
           <text x="396" y="424" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11" fill="rgba(255,255,255,0.75)">[συνεργασία]</text>
         </svg>
@@ -802,86 +804,19 @@ footer{
   <div class="s-inner">
     <div class="s-eyebrow rv">11 — Color Palette</div>
     <h2 class="s-title rv">Χρωματική Παλέτα</h2>
-    <p class="s-lead rv">Η παλέτα εκφράζει την πληρότητα του brand: ζωντάνια, ζεστασιά, εμπιστοσύνη και φυσικότητα. Τέσσερις οικογένειες χρωμάτων — καθεμιά με 8 διαβαθμίσεις — καλύπτουν όλες τις ανάγκες επικοινωνίας. Το gradient Magenta → Purple → Blue παραμένει η «υπογραφή» του brand.</p>
+    <p class="s-lead rv">Τα χρώματα της Xenos εκφράζουν απλότητα, ποιότητα και αξιοπιστία. Τέσσερα βασικά χρώματα καλύπτουν όλες τις ανάγκες επικοινωνίας.</p>
 
     <div class="rv">
       <div class="grad-bar"><span>Brand Gradient — The Signature</span></div>
-      <div class="grad-meta"><div><div class="grad-name">Magenta → Purple → Blue</div><div class="grad-code">linear-gradient(135deg, #C93978 → #7A27A3 → #2087E5)</div></div><div style="font-size:11px;color:var(--muted)">Primary Brand Expression</div></div>
+      <div class="grad-meta"><div><div class="grad-name">Xenos Red → Xenos Grey</div><div class="grad-code">linear-gradient(135deg, #AE2B20 → #4F4F51)</div></div><div style="font-size:11px;color:var(--muted)">Primary Brand Expression</div></div>
     </div>
 
     <div style="font-family:'Outfit',sans-serif;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--purple);margin-bottom:14px">Core Brand Colors</div>
     <div class="swatches rv">
-      <div class="sw"><div class="sw-block" style="background:#C93978"></div><div class="sw-info"><div class="sw-name">Brand Magenta</div><div class="sw-hex">#C93978</div><div class="sw-role">Primary — Energy</div></div></div>
-      <div class="sw"><div class="sw-block" style="background:#7A27A3"></div><div class="sw-info"><div class="sw-name">Deep Purple</div><div class="sw-hex">#7A27A3</div><div class="sw-role">Primary — Authority</div></div></div>
-      <div class="sw"><div class="sw-block" style="background:#2087E5"></div><div class="sw-info"><div class="sw-name">Brand Blue</div><div class="sw-hex">#2087E5</div><div class="sw-role">Primary — Trust</div></div></div>
-      <div class="sw"><div class="sw-block" style="background:#070A33"></div><div class="sw-info"><div class="sw-name">Signature Navy</div><div class="sw-hex">#070A33</div><div class="sw-role">Text — Depth</div></div></div>
-      <div class="sw"><div class="sw-block" style="background:#AE5BD7"></div><div class="sw-info"><div class="sw-name">Lavender</div><div class="sw-hex">#AE5BD7</div><div class="sw-role">Accent — Warmth</div></div></div>
-      <div class="sw"><div class="sw-block" style="background:#D09258"></div><div class="sw-info"><div class="sw-name">Warm Amber</div><div class="sw-hex">#D09258</div><div class="sw-role">Accent — Human</div></div></div>
-      <div class="sw"><div class="sw-block" style="background:#40A281"></div><div class="sw-info"><div class="sw-name">Sage Green</div><div class="sw-hex">#40A281</div><div class="sw-role">Accent — Nature</div></div></div>
-      <div class="sw"><div class="sw-block" style="background:#F5F5FA;border:1px solid #E0E0EC"></div><div class="sw-info"><div class="sw-name">Off White</div><div class="sw-hex">#F5F5FA</div><div class="sw-role">Background — Space</div></div></div>
-    </div>
-
-    <div style="font-family:'Outfit',sans-serif;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--purple);margin:48px 0 14px">Extended Palette — Four Families × Eight Tints</div>
-    <div class="palette-families rv">
-      <div class="pfam">
-        <div class="pfam-head"><div class="pfam-name">Magenta Family</div><div class="pfam-role">Energy · Brand Identity</div></div>
-        <div class="pfam-stack">
-          <div class="pfam-chip light" style="background:#EF8093"><span>#EF8093</span><span class="tint">01</span></div>
-          <div class="pfam-chip light" style="background:#E94B67"><span>#E94B67</span><span class="tint">02</span></div>
-          <div class="pfam-chip" style="background:#C93978"><span>#C93978</span><span class="tint">03</span></div>
-          <div class="pfam-chip" style="background:#A12B5F"><span>#A12B5F</span><span class="tint">04</span></div>
-          <div class="pfam-chip" style="background:#AE5BD7"><span>#AE5BD7</span><span class="tint">05</span></div>
-          <div class="pfam-chip" style="background:#7A27A3"><span>#7A27A3</span><span class="tint">06</span></div>
-          <div class="pfam-chip" style="background:#42235F"><span>#42235F</span><span class="tint">07</span></div>
-          <div class="pfam-chip" style="background:#201541"><span>#201541</span><span class="tint">08</span></div>
-        </div>
-      </div>
-      <div class="pfam">
-        <div class="pfam-head"><div class="pfam-name">Warm Family</div><div class="pfam-role">Human · Craft · Heritage</div></div>
-        <div class="pfam-stack">
-          <div class="pfam-chip light" style="background:#F7DCC4"><span>#F7DCC4</span><span class="tint">01</span></div>
-          <div class="pfam-chip light" style="background:#E7B283"><span>#E7B283</span><span class="tint">02</span></div>
-          <div class="pfam-chip light" style="background:#D09258"><span>#D09258</span><span class="tint">03</span></div>
-          <div class="pfam-chip light" style="background:#CF9258"><span>#CF9258</span><span class="tint">04</span></div>
-          <div class="pfam-chip" style="background:#B68252"><span>#B68252</span><span class="tint">05</span></div>
-          <div class="pfam-chip" style="background:#A96323"><span>#A96323</span><span class="tint">06</span></div>
-          <div class="pfam-chip" style="background:#793003"><span>#793003</span><span class="tint">07</span></div>
-          <div class="pfam-chip" style="background:#63360D"><span>#63360D</span><span class="tint">08</span></div>
-        </div>
-      </div>
-      <div class="pfam">
-        <div class="pfam-head"><div class="pfam-name">Blue Family</div><div class="pfam-role">Trust · Reliability · Rigour</div></div>
-        <div class="pfam-stack">
-          <div class="pfam-chip light" style="background:#CFE2F0"><span>#CFE2F0</span><span class="tint">01</span></div>
-          <div class="pfam-chip light" style="background:#BBDDFC"><span>#BBDDFC</span><span class="tint">02</span></div>
-          <div class="pfam-chip light" style="background:#64B5F5"><span>#64B5F5</span><span class="tint">03</span></div>
-          <div class="pfam-chip" style="background:#2087E5"><span>#2087E5</span><span class="tint">04</span></div>
-          <div class="pfam-chip" style="background:#0E47A1"><span>#0E47A1</span><span class="tint">05</span></div>
-          <div class="pfam-chip" style="background:#111990"><span>#111990</span><span class="tint">06</span></div>
-          <div class="pfam-chip" style="background:#022B6C"><span>#022B6C</span><span class="tint">07</span></div>
-          <div class="pfam-chip" style="background:#070A33"><span>#070A33</span><span class="tint">08</span></div>
-        </div>
-      </div>
-      <div class="pfam">
-        <div class="pfam-head"><div class="pfam-name">Green Family</div><div class="pfam-role">Nature · Sustainability · ISO</div></div>
-        <div class="pfam-stack">
-          <div class="pfam-chip light" style="background:#C8EECD"><span>#C8EECD</span><span class="tint">01</span></div>
-          <div class="pfam-chip light" style="background:#92E5A8"><span>#92E5A8</span><span class="tint">02</span></div>
-          <div class="pfam-chip light" style="background:#6ABF7E"><span>#6ABF7E</span><span class="tint">03</span></div>
-          <div class="pfam-chip light" style="background:#5BDF7B"><span>#5BDF7B</span><span class="tint">04</span></div>
-          <div class="pfam-chip" style="background:#74C69E"><span>#74C69E</span><span class="tint">05</span></div>
-          <div class="pfam-chip" style="background:#40A281"><span>#40A281</span><span class="tint">06</span></div>
-          <div class="pfam-chip" style="background:#266851"><span>#266851</span><span class="tint">07</span></div>
-          <div class="pfam-chip" style="background:#0A3A2A"><span>#0A3A2A</span><span class="tint">08</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div style="font-family:'Outfit',sans-serif;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--purple);margin-bottom:14px">How the Families Work Together</div>
-    <div class="usage-grid rv">
-      <div class="usage-card"><div class="uc-label">Magenta + Purple + Blue</div><div class="uc-title">Signature Gradient</div><div class="uc-text">Το κύριο brand expression. Χρησιμοποιείται σε hero sections, CTAs, key visuals — όπου χρειάζεται ενέργεια και αναγνωρισιμότητα.</div></div>
-      <div class="usage-card"><div class="uc-label">Warm Family</div><div class="uc-title">Ανθρώπινο στοιχείο</div><div class="uc-text">Για να αναδειχθεί η ανθρώπινη φροντίδα, η οικογενειακή ιστορία και τα 35 χρόνια δουλειάς. Ιδανικά σε storytelling και συνεντεύξεις προσωπικού.</div></div>
-      <div class="usage-card"><div class="uc-label">Blue + Green Families</div><div class="uc-title">Ποιότητα & Υπευθυνότητα</div><div class="uc-text">Πιστοποιήσεις ISO, περιβαλλοντικά θέματα, τεχνικά specs, data. Εκφράζουν τη σοβαρότητα και το «οργανωμένο» της εταιρείας.</div></div>
+      <div class="sw"><div class="sw-block" style="background:#AE2B20"></div><div class="sw-info"><div class="sw-name">Xenos Red</div><div class="sw-hex">#AE2B20</div><div class="sw-role">Primary — Brand Identity</div></div></div>
+      <div class="sw"><div class="sw-block" style="background:#4F4F51"></div><div class="sw-info"><div class="sw-name">Xenos Grey</div><div class="sw-hex">#4F4F51</div><div class="sw-role">Secondary — Neutral</div></div></div>
+      <div class="sw"><div class="sw-block" style="background:#000000"></div><div class="sw-info"><div class="sw-name">Black</div><div class="sw-hex">#000000</div><div class="sw-role">Text — Depth</div></div></div>
+      <div class="sw"><div class="sw-block" style="background:#FFFFFF;border:1px solid #E0E0E0"></div><div class="sw-info"><div class="sw-name">White</div><div class="sw-hex">#FFFFFF</div><div class="sw-role">Background — Space</div></div></div>
     </div>
   </div>
 </section>
